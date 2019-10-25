@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="366.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="366.0" fitWidth="405.0" layoutX="1.0" layoutY="1.0">
+            <image>
+                <Image url="@../../../../../Users/alfo7-10/Desktop/KakaoTalk_20190529_133955359.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="95.0" layoutY="28.0" prefHeight="58.0" prefWidth="216.0" text="결제가 완료 되었습니다.">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="200.0" fitWidth="198.0" layoutX="104.0" layoutY="84.0">
+            <image>
+                <Image url="@../../../../../Users/alfo7-10/Desktop/KakaoTalk_20190529_140200575.png"/>
+            </image>
+        </ImageView>
+        <Button layoutX="183.0" layoutY="315.0" mnemonicParsing="false" text="확인"/>
+    </children>
+</AnchorPane>

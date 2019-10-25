@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.LoginController">
+    <children>
+        <VBox alignment="CENTER" spacing="20.0">
+            <children>
+                <ImageView fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo.jpg"/>
+                    </image>
+                </ImageView>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <Label text="아이디 :    "/>
+                        <TextField fx:id="loginID" promptText="아이디 입력"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <Label text="패스워드 : "/>
+                        <PasswordField fx:id="loginPassword" promptText="패스워드 입력"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="btnMemberAdd" mnemonicParsing="false" text="회원가입"/>
+                        <Button fx:id="btnOK" mnemonicParsing="false" text="로그인"/>
+                        <Button fx:id="btnCancel" mnemonicParsing="false" text="취소"/>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0"/>
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
