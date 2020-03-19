@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FinancialController">
+   <top>
+      <AnchorPane prefHeight="100.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="172.0" layoutY="14.0" text="KK INDUSTRIES">
+               <font>
+                  <Font name="Arial Black" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="60.0" text="Financial Status Table">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="114.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="551.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="90.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="2">
+               <children>
+                  <Label layoutX="25.0" layoutY="7.0" text="I. Current assets">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="4">
+               <children>
+                  <Label layoutX="40.0" layoutY="7.0" text="② Inventories">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="5" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="17" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="16">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" text="Liabilities Total">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="15">
+               <children>
+                  <Label layoutX="25.0" layoutY="7.0" text="II. Non - Current Liabilities">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="14">
+               <children>
+                  <Label layoutX="25.0" layoutY="7.0" text="I. Current Liabilities">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="13">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" text="Liabilities">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="12" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="11">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" text="Assets total">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="10">
+               <children>
+                  <Label layoutX="40.0" layoutY="7.0" text="④ Other Non - Current Assets">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="9">
+               <children>
+                  <Label layoutX="40.0" layoutY="7.0" text="③ Intangible Assets">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="8">
+               <children>
+                  <Label layoutX="40.0" layoutY="7.0" text="② Tangible Assets">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="7">
+               <children>
+                  <Label layoutX="40.0" layoutY="7.0" text="① Investment Assets">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="1">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" text="Assats">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="19">
+               <children>
+                  <Label layoutX="25.0" layoutY="7.0" text="I. Capital stock">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="18">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" text="Stock">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="6">
+               <children>
+                  <Label layoutX="20.0" layoutY="6.0" text="II. Non - Current Assets">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="21">
+               <children>
+                  <Label layoutX="16.0" layoutY="10.0" text="Liabilities and Stock Total">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="laAsDe" alignment="CENTER_RIGHT" layoutX="53.0" layoutY="7.0" prefHeight="18.0" prefWidth="171.0" text="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="20">
+               <children>
+                  <Label layoutX="14.0" layoutY="9.0" text="Stock Total">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="21">
+               <children>
+                  <Label fx:id="laTotalDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="20">
+               <children>
+                  <Label fx:id="laStoTotalDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="21">
+               <children>
+                  <Label fx:id="laTotalCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="20">
+               <children>
+                  <Label fx:id="laStoTotalCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="16">
+               <children>
+                  <Label fx:id="laLiTotalCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="19">
+               <children>
+                  <Label fx:id="laStoCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="19">
+               <children>
+                  <Label fx:id="laStoDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="16">
+               <children>
+                  <Label fx:id="laLiTotalDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="15">
+               <children>
+                  <Label fx:id="laNoLiCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="15">
+               <children>
+                  <Label fx:id="laNoLiDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="14">
+               <children>
+                  <Label fx:id="laLiCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="14">
+               <children>
+                  <Label fx:id="laLiDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="11">
+               <children>
+                  <Label fx:id="laAsTotalCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <children>
+                  <Label fx:id="laCre6" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <children>
+                  <Label fx:id="laCre5" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <children>
+                  <Label fx:id="laCre4" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <children>
+                  <Label fx:id="laCre3" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="laNonCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Label fx:id="laCre2" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="laAsCre" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <children>
+                  <Label fx:id="laAsTotalDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <children>
+                  <Label fx:id="laDe6" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <children>
+                  <Label fx:id="laDe5" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <Label fx:id="laDe4" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <Label fx:id="laDe3" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="laNonDe" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Label fx:id="laDe2" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.rowIndex="3">
+               <children>
+                  <Label layoutX="40.0" layoutY="7.0" text="① Quick assets">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label fx:id="laDe1" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Label fx:id="laCre1" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="7.0" text="0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc; -fx-background-color: lightgray;">
+               <children>
+                  <Label layoutX="90.0" layoutY="5.0" text="Subject">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc; -fx-background-color: lightgray;" GridPane.columnIndex="2">
+               <children>
+                  <Label layoutX="89.0" layoutY="5.0" text="Credit">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #dcdcdc; -fx-background-color: lightgray;" GridPane.columnIndex="1">
+               <children>
+                  <Label layoutX="93.0" layoutY="5.0" text="Debit">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

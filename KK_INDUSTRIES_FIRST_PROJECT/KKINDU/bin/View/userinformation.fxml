@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserInfoController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tvUserInfo" prefHeight="767.0" prefWidth="699.0" style="-fx-background-color: whitesmoke;">
+               <columns>
+                  <TableColumn fx:id="tcID" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="tcPW" prefWidth="75.0" text="PassWord" />
+                  <TableColumn fx:id="tcBan" prefWidth="101.0" text="Banned" />
+                  <TableColumn fx:id="tcName" prefWidth="96.0" text="Name" />
+                  <TableColumn fx:id="tcEmNo" prefWidth="123.0" text="Employee_Num" />
+                  <TableColumn fx:id="tcDepart" prefWidth="110.0" text="Department" />
+                  <TableColumn fx:id="tcPosition" prefWidth="118.0" text="Position" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <BorderPane prefHeight="771.0" prefWidth="503.0" style="-fx-background-color: whitesmoke;" BorderPane.alignment="CENTER">
+         <top>
+            <TitledPane animated="false" text="User_Info" BorderPane.alignment="CENTER">
+               <content>
+                  <TilePane prefHeight="760.0" prefWidth="501.0">
+                     <children>
+                        <BorderPane prefHeight="737.0" prefWidth="490.0">
+                           <right>
+                              <Pane prefHeight="505.0" prefWidth="490.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="imageView" fitHeight="190.0" fitWidth="145.0" layoutX="32.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                       
+                                    </ImageView>
+                                    <Label layoutX="210.0" layoutY="40.0" prefHeight="20.0" prefWidth="99.0" text="Employee.NO" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="210.0" layoutY="80.0" prefHeight="20.0" prefWidth="43.0" text="Name">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laName" alignment="CENTER" layoutX="268.0" layoutY="80.0" prefHeight="15.0" prefWidth="49.0" text="황규상">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laEmpNo" alignment="CENTER" layoutX="324.0" layoutY="40.0" prefHeight="15.0" prefWidth="51.0" text="D1111">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="210.0" layoutY="160.0" prefHeight="20.0" prefWidth="60.0" text="Position">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laPosition" layoutX="285.0" layoutY="160.0" prefHeight="15.0" prefWidth="82.0" text="ChairMan">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="281.0" prefHeight="20.0" prefWidth="45.0" text="Phone">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="254.0" layoutY="281.0" prefHeight="20.0" prefWidth="54.0" text="Gender">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="241.0" prefHeight="20.0" prefWidth="184.0" text="Resident Registration.NO">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laGender" alignment="CENTER" layoutX="324.0" layoutY="281.0" prefHeight="15.0" prefWidth="44.0" text="Man">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laPhone" alignment="CENTER" layoutX="115.0" layoutY="282.0" prefHeight="16.0" prefWidth="119.0" text="010-6235-7736">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laResident" alignment="CENTER" layoutX="254.0" layoutY="241.0" prefHeight="17.0" prefWidth="162.0" text="920808">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="210.0" layoutY="200.0" prefHeight="20.0" prefWidth="102.0" text="Annual Salary">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laAnnual" alignment="CENTER" layoutX="327.0" layoutY="200.0" prefHeight="15.0" prefWidth="89.0" text="1000000000">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="321.0" prefHeight="16.0" prefWidth="58.0" text="Address">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laAddress" layoutX="128.0" layoutY="321.0" prefHeight="17.0" prefWidth="363.0" text="서울특별시 은평구 서오릉로 46 201동 801호">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="361.0" prefHeight="20.0" prefWidth="249.0" text="Academic Background Information">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laAcademic" layoutX="319.0" layoutY="361.0" prefHeight="16.0" prefWidth="134.0" text="난 서울대학교 재학중">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="401.0" prefHeight="20.0" prefWidth="120.0" text="Employment day">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laDay" alignment="CENTER" layoutX="190.0" layoutY="401.0" prefHeight="15.0" prefWidth="89.0" text="2019. 02. 05">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="210.0" layoutY="120.0" prefHeight="20.0" prefWidth="88.0" text="Department">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laDepartment" layoutX="313.0" layoutY="120.0" prefHeight="16.0" prefWidth="50.0" text="Master">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="441.0" prefHeight="20.0" prefWidth="123.0" text="Account Number">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laAccount" alignment="CENTER" layoutX="237.0" layoutY="441.0" prefHeight="16.0" prefWidth="111.0" text="1002743218249">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laBank" alignment="CENTER" layoutX="193.0" layoutY="441.0" prefHeight="15.0" prefWidth="44.0" text="우리">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="481.0" prefHeight="20.0" prefWidth="226.0" text="Four Major Insurance Coverage">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="342.0" layoutY="80.0" prefHeight="20.0" prefWidth="39.0" text="State">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laState" alignment="CENTER" layoutX="396.0" layoutY="80.0" prefHeight="15.0" prefWidth="38.0" text="재직">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laProject" alignment="CENTER" layoutX="125.0" layoutY="601.0" prefHeight="15.0" prefWidth="49.0" text="진행중">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="601.0" prefHeight="20.0" prefWidth="55.0" text="Project">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laFour" alignment="CENTER" layoutX="296.0" layoutY="481.0" prefHeight="16.0" prefWidth="71.0" text="Subscribe">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="641.0" prefHeight="20.0" prefWidth="73.0" text="Work Day">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laworkday" alignment="CENTER" layoutX="143.0" layoutY="641.0" prefHeight="16.0" prefWidth="44.0" text="주5일">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="521.0" prefHeight="20.0" prefWidth="125.0" text="Health Insurance">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laHealth" alignment="CENTER" layoutX="195.0" layoutY="521.0" prefHeight="16.0" prefWidth="71.0" text="Subscribe">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="55.0" layoutY="561.0" prefHeight="20.0" prefWidth="125.0" text="National Pension">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="laNational" alignment="CENTER" layoutX="195.0" layoutY="562.0" prefHeight="16.0" prefWidth="71.0" text="Subscribe">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </TilePane>
+               </content>
+            </TitledPane>
+         </top>
+      </BorderPane>
+   </right>
+</BorderPane>

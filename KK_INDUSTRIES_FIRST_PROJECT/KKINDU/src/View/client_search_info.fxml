@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="310.0" style="-fx-background-color: whitesmoke;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClientSearchController">
+   <top>
+      <AnchorPane prefHeight="12.0" prefWidth="210.0" style="-fx-background-color: whitesmoke;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="7.0" prefHeight="37.0" prefWidth="214.0" text="KK INDUSTRIES">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="34.0" prefHeight="21.0" prefWidth="178.0" text="Search Client Name">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-2.0" layoutY="61.0" prefHeight="2.0" prefWidth="311.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <ToolBar prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: whitesmoke;" BorderPane.alignment="CENTER">
+        <items>
+            <Label prefHeight="15.0" prefWidth="40.0" />
+            <Label text="Search">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="15.0" />
+            <TextField fx:id="txtVal" prefHeight="24.0" prefWidth="130.0">
+               <font>
+                  <Font name="Arial Black" size="11.0" />
+               </font>
+            </TextField>
+        </items>
+      </ToolBar>
+   </center>
+   <bottom>
+      <ListView fx:id="listView" prefHeight="301.0" prefWidth="210.0" style="-fx-background-color: whitesmoke;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

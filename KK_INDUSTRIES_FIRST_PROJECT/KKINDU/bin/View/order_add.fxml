@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderAddController">
+   <children>
+      <Label layoutX="81.0" layoutY="14.0" text="KK INDUSTRIES">
+         <font>
+            <Font name="Arial Black" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="63.0" text="Add Order Information">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Line endX="249.0" layoutX="251.0" layoutY="106.0" startX="-251.0" />
+      <Label layoutX="65.0" layoutY="130.0" text="Deadline Date">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="175.0" text="Hopeful Employee">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="220.0" text="Class">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtReq" layoutX="65.0" layoutY="381.0" prefHeight="153.0" prefWidth="370.0" AnchorPane.bottomAnchor="116.0">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font></TextArea>
+      <Label layoutX="378.0" layoutY="534.0" text="(100/500)" AnchorPane.bottomAnchor="99.0" />
+      <DatePicker fx:id="date" layoutX="221.0" layoutY="132.0" />
+      <Button fx:id="btnReg" layoutX="389.0" layoutY="611.0" mnemonicParsing="false" text="Registration">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="64.0" layoutY="355.0" text="Requirements">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbClass" layoutX="140.0" layoutY="222.0" prefWidth="150.0" style="-fx-background-color: #dcdcdc;">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+           <String fx:value="Web" />
+           <String fx:value="App" />
+           <String fx:value="Program" />
+          </FXCollections>
+     </items>
+      </ComboBox>
+      <Label layoutX="65.0" layoutY="265.0" text="Company Name">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCompany" layoutX="230.0" layoutY="265.0" prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: #dcdcdc;">
+        
+      </ComboBox>
+      <ComboBox fx:id="cmbHope" layoutX="250.0" layoutY="175.0" prefHeight="27.0" prefWidth="169.0" style="-fx-background-color: #dcdcdc;">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Web" />
+               <String fx:value="App" />
+               <String fx:value="Program" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label layoutX="65.0" layoutY="310.0" text="Project Name">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPro" layoutX="215.0" layoutY="310.0" prefHeight="27.0" prefWidth="194.0" />
+   </children>
+</AnchorPane>

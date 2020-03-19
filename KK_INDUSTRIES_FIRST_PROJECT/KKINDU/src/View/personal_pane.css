@@ -1,0 +1,39 @@
+#Right{
+	-fx-background-image: url("images/btnRight.png");
+}
+
+#Left{
+	-fx-background-image: url("images/btnLeft.png");
+}
+
+#Correct{
+	-fx-background-image: url("images/correct.png");
+}
+
+#Delete{
+	-fx-background-image: url("images/delete.png");
+}
+
+#DeleteS{
+	-fx-background-image: url("images/deleteS.png");
+}
+
+#DeleteL{
+	-fx-background-image: url("images/deleteL.png");
+}
+
+#Download{
+	-fx-background-image: url("images/download.png");
+}
+
+#Add{
+	-fx-background-image: url("images/add.png");
+}
+
+#AddC{
+	-fx-background-image: url("images/addC.png");
+}
+
+#Salary{
+	-fx-background-image: url("images/salary.png");
+}

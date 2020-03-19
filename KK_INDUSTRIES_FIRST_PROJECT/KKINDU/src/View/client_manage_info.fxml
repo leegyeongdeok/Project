@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClientManageController">
+   <children>
+      <BorderPane layoutY="-7.0" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="600.0" prefWidth="12.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Info_Purchase">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="-3.0" layoutY="-1.0" prefHeight="773.0" prefWidth="1207.0">
+                                 <center>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="165.55" layoutY="23.0" text="Client Details Information">
+                                             <font>
+                                                <Font name="Arial Black" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="178.0" text="Client Company Name">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="298.0" text="Business License Number">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="238.0" text="Business Sector">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="358.0" text="Representative name">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="418.0" text="Resident Registration Number">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="478.0" text="Phone">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="538.0" text="Address">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="598.0" text="Employee In Charge">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="658.0" text="Employee In Charge Phone">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="-3.0" layoutY="707.0" prefHeight="8.0" prefWidth="861.0" />
+                                          <Line endX="500.0" layoutX="365.0" layoutY="90.0" startX="-2000.0" stroke="GAINSBORO" strokeWidth="2.0" />
+                                          <Label layoutX="287.5" layoutY="712.0" text="KK Industries" textFill="GAINSBORO">
+                                             <font>
+                                                <Font name="Arial Black" size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laCName" layoutX="385.0" layoutY="178.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laBSector" layoutX="331.0" layoutY="238.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laBLNumber" layoutX="420.0" layoutY="298.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laRName" layoutX="378.0" layoutY="356.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laRRNumber" layoutX="460.0" layoutY="419.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laPhone" layoutX="238.0" layoutY="479.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laAddress" layoutX="256.0" layoutY="537.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laEICharge" layoutX="366.0" layoutY="597.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laEICNumber" layoutX="429.0" layoutY="658.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="118.0" text="Client.NO">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="laClientNO" layoutX="269.0" layoutY="118.0">
+                                             <font>
+                                                <Font name="Arial Black" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </Pane>
+                                 </center>
+                                 <left>
+                                    <Pane prefHeight="773.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ListView fx:id="listView" layoutX="3.0" layoutY="90.0" prefHeight="684.0" prefWidth="347.0" />
+                                          <Pane prefHeight="90.0" prefWidth="350.0" style="-fx-border-color: gainsboro;">
+                                             <children>
+                                                <Label layoutX="98.0" layoutY="26.0" text="Client list">
+                                                   <font>
+                                                      <Font name="Arial Black" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button id="AddC" fx:id="btnAdd" layoutX="250.0" layoutY="27.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" stylesheets="@personal_pane.css" />
+                                                <Button id="DeleteL" fx:id="btnDel" layoutX="305.0" layoutY="27.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" stylesheets="@personal_pane.css" />
+                                             </children>
+                                          </Pane>
+                                          <Separator layoutX="349.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="200.0" />
+                                       </children>
+                                    </Pane>
+                                 </left>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="724.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SalaryManageController">
+   <children>
+      <Separator layoutX="-33.0" layoutY="100.0" prefHeight="0.0" prefWidth="800.0" />
+      <Label layoutX="185.0" layoutY="24.0" text="Salary Information">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="130.0" text="Employee.NO">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="250.0" text="Employee Name">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="190.0" text="Department">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="525.0" text="Income Tax">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="310.0" text="Annual Salary">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="190.0" text="Position">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="585.0" text="Account">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="370.0" text="Annual Bonus">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-33.0" layoutY="652.0" prefHeight="2.0" prefWidth="800.0" />
+      <Label layoutX="234.0" layoutY="666.0" text="KK INDUSTRIES" textFill="GAINSBORO">
+         <font>
+            <Font name="Arial Black" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="laEmpNo" layoutX="229.0" layoutY="130.0" text="Content">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="laDepart" layoutX="214.0" layoutY="190.0" text="Content">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="laNa" layoutX="257.0" layoutY="250.0" text="Content">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Button id="Download" fx:id="btnLoad" layoutX="615.0" layoutY="115.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@personal_pane.css" />
+      <Button id="Correct" fx:id="btnUpdate" layoutX="665.0" layoutY="115.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@personal_pane.css" />
+      <Group layoutX="68.0" layoutY="465.0">
+         <children>
+            <CheckBox fx:id="ckbFour" mnemonicParsing="false" prefHeight="20.0" prefWidth="176.0" text="4 Major Insurance">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ckbHealth" layoutX="180.0" layoutY="1.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="348.0" text="Health Insurance">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ckbNation" layoutX="359.0" layoutY="3.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="163.0" text="National Pension">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </Group>
+      <Label layoutX="68.0" layoutY="430.0" prefHeight="27.0" prefWidth="248.0" text="Insurance Joining status" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSal" layoutX="235.0" layoutY="310.0" prefHeight="33.0" prefWidth="199.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtBo" layoutX="234.0" layoutY="370.0" prefHeight="33.0" prefWidth="199.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtAcc" layoutX="271.0" layoutY="585.0" prefHeight="27.0" prefWidth="248.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtBank" layoutX="167.0" layoutY="585.0" prefHeight="33.0" prefWidth="95.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </TextField>
+      <Label fx:id="laPos" layoutX="486.0" layoutY="190.0" text="Content">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="laTax" layoutX="218.0" layoutY="528.0" prefHeight="27.0" prefWidth="199.0" text="Content">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

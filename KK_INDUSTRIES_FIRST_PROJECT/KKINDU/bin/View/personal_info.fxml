@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane prefHeight="766.0" prefWidth="570.0" style="-fx-background-color: whitesmoke;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PersonalController">
+   <children>
+      <Label layoutX="40.0" layoutY="88.0" prefHeight="26.0" prefWidth="162.0" text="Employee.NO" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="138.0" prefHeight="26.0" prefWidth="100.0" text="Name" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="238.0" prefHeight="26.0" prefWidth="247.0" text="Resident Registration.NO" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="338.0" prefHeight="26.0" prefWidth="104.0" text="Address" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="388.0" prefHeight="26.0" prefWidth="184.0" text="Account Number" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="laEmno" layoutX="181.0" layoutY="88.0" prefHeight="17.0" prefWidth="71.0">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="188.0" prefHeight="26.0" prefWidth="84.0" text="Gender">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="288.0" prefHeight="26.0" prefWidth="86.0" text="Phone" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="32.0" text="Personal Information">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="438.0" prefHeight="26.0" prefWidth="352.0" text="Academic Background Information" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="laname" layoutX="107.0" layoutY="138.0" prefHeight="27.0" prefWidth="200.0" text="">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRrno" layoutX="290.0" layoutY="238.0" prefHeight="27.0" prefWidth="162.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+      <Label fx:id="laGender" layoutX="124.0" layoutY="188.0" prefHeight="27.0" prefWidth="124.0" text="">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPhone" layoutX="107.0" layoutY="288.0" prefHeight="27.0" prefWidth="255.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtAdd" layoutX="126.0" layoutY="338.0" prefHeight="33.0" prefWidth="429.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtAccount" layoutX="307.0" layoutY="388.0" prefHeight="27.0" prefWidth="184.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+      <TextArea fx:id="txtAcademic" layoutX="40.0" layoutY="471.0" prefHeight="225.0" prefWidth="448.0">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font></TextArea>
+      <Label alignment="CENTER_RIGHT" layoutX="405.0" layoutY="695.0" prefHeight="17.0" prefWidth="85.0" text="( 100/ 500 )" />
+      <Button id="Correct" fx:id="btnUpdate" layoutX="520.0" layoutY="32.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@personal_pane.css" />
+      <Button id="Download" fx:id="btnLoad" layoutX="470.0" layoutY="32.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@personal_pane.css" />
+      <TextField fx:id="txtBank" layoutX="209.0" layoutY="388.0" prefHeight="27.0" prefWidth="86.0">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></TextField>
+   </children>
+</Pane>
