@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface GeneralBoardRepository extends JpaRepository<GeneralBoard, Long> {
 
-    GeneralBoard findByGeneralBoardNo(Long generalBoardNo);
+    GeneralBoard findByBoardNo(Long generalBoardNo);
     Page<GeneralBoard> findAllByTitleContainsOrContentContains(String title, String content, Pageable pageable);
     Page<GeneralBoard> findAllByContentContains(String content, Pageable pageable);
     Page<GeneralBoard> findAllByTitleContains(String title, Pageable pageable);

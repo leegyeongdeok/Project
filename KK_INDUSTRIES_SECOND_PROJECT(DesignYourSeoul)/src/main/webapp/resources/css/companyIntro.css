@@ -1,0 +1,64 @@
+
+body {
+    height: 100vw;
+}
+
+.introduction_box {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.introduction_title{
+    width: 90vw;
+    font-size: 2em;
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: Big Shoulders Display;
+}
+
+.introduction_body{
+    margin-top: 3%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.introbody_image {
+    width: 100%;
+}
+
+.introbody_image> img{
+    width: 100%;
+}
+
+/* 텍스트 위치 */
+.introbody_title {
+    margin-top: 5vw;
+    width: 150px;
+    float: left;
+    font-size: 20px;
+
+}
+
+.introbody_body {
+    width: 90vw;
+    line-height: 1.3em;
+    margin-left: auto;
+    font-size: 1.2em;
+    margin-top: 5vw;
+}
+
+
+.introbody_body> p {
+    margin-left: 150px;
+    font-size: 16px;
+}
+
+.introbody_body2 {
+    width: 825px;
+    margin-left: auto;
+    font-size: 16px;
+    margin-top: 5%;
+}

@@ -21,7 +21,7 @@ public class GeneralBoard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long generalBoardNo;
+    private Long boardNo;
 
     private String title;
     private String content;

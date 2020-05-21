@@ -1,15 +1,7 @@
 package kk.second.dys.controller;
 
 import kk.second.dys.model.entity.GeneralQuestion;
-import kk.second.dys.model.entity.Notice;
-import kk.second.dys.model.entity.OwnerQuestion;
-import kk.second.dys.model.netowrk.request.GeneralQuestionRequest;
-import kk.second.dys.model.netowrk.request.OwnerQuestionRequest;
-import kk.second.dys.model.netowrk.response.GeneralQuestionResponse;
-import kk.second.dys.model.netowrk.response.OwnerQuestionResponse;
-import kk.second.dys.service.GeneralQuestionPageService;
-import kk.second.dys.service.NoticePageService;
-import kk.second.dys.service.OwnerQuestionPageService;
+import kk.second.dys.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -17,97 +9,83 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("/dys")
 public class QuestionController {
 
     @Autowired
-    private OwnerQuestionPageService oservice;
+    private QuestionService service;
 
-    @Autowired
-    private GeneralQuestionPageService gservice;
+    @GetMapping({"/question"})
+    public String noticeList(@RequestParam(required = false, defaultValue = "") String search,
+                             @RequestParam(required = false, defaultValue = "all") String searchType, @PageableDefault Pageable pageable, ModelMap modelMap,
+                             HttpServletRequest request) {
 
-    @GetMapping({"/Question"})
-    public String noticeList(@RequestParam(required = false) String type, @RequestParam(required = false, defaultValue = "")  String search,
-                             @RequestParam(required = false, defaultValue = "all") String stype, @RequestParam(required = false) String id,
-                             @PageableDefault Pageable pageable, ModelMap modelMap) {
-        if(type.equals("owner")){
-            modelMap.addAttribute("id", id);
-            modelMap.addAttribute("stype", stype);
-            modelMap.addAttribute("search", search);
-            if (search.equals("")){
-                modelMap.addAttribute("ownerQuestion", oservice.findNoticeList(id, pageable));
-            }else{
-                if(stype.equals("all")){
-                    modelMap.addAttribute("ownerQuestion", oservice.searchAllNoticeList(pageable, search));
-                }else if(stype.equals("title")){
-                    modelMap.addAttribute("ownerQuestion", oservice.searchTitleNoticeList(pageable, search));
-                }else{
-                    modelMap.addAttribute("ownerQuestion", oservice.searchContentNoticeList(pageable, search));
-                }
-            }
-            return "customerserviceowner/ownerQuestion";
-        } else if (type.equals("general")){
-            modelMap.addAttribute("id", id);
-            modelMap.addAttribute("stype", stype);
-            modelMap.addAttribute("search", search);
-            if (search.equals("")){
-                modelMap.addAttribute("generalQuestion", gservice.findNoticeList(id, pageable));
-            }else{
-                if(stype.equals("all")){
-                    modelMap.addAttribute("generalQuestion", gservice.searchAllNoticeList(pageable, search));
-                }else if(stype.equals("title")){
-                    modelMap.addAttribute("generalQuestion", gservice.searchTitleNoticeList(pageable, search));
-                }else{
-                    modelMap.addAttribute("generalQuestion", gservice.searchContentNoticeList(pageable, search));
-                }
-            }
-            return "customerservicelogin/loginQuestion";
-        }else{
-            return null;
+        String account = (String) request.getSession().getAttribute("ACCOUNT");
+        String type = (String) request.getSession().getAttribute("TYPE");
+        if (type == null) {
+            type = "general";
         }
 
-    }
+        if (type.equals("owner")) {
+            if (searchType.equals("")) {
+                modelMap.addAttribute("question", service.findOwnerQuestion(account, pageable));
+            } else {
+                if (searchType.equals("all")) {
+                    modelMap.addAttribute("question", service.searchOwnerByContainsInAll(pageable, search));
+                } else if (searchType.equals("title")) {
+                    modelMap.addAttribute("question", service.searchOwnerByContainsInTitle(pageable, search));
+                } else {
+                    modelMap.addAttribute("question", service.searchOwnerByContainsInContain(pageable, search));
+                }
+            }
 
-    @GetMapping("/QuestionDetail")
-    public String questionDetail(@RequestParam(required = false) String type, @RequestParam(required = false) String  no,
-                                 ModelMap modelMap) {
-        System.out.println("detail");
+        } else{
+            if (searchType.equals("")) {
+                modelMap.addAttribute("question", service.findGeneralQuestion(account, pageable));
+            } else {
+                if (searchType.equals("all")) {
+                    modelMap.addAttribute("question", service.searchGeneralByContainsInAll(pageable, search));
+                } else if (searchType.equals("title")) {
+                    modelMap.addAttribute("question", service.searchGeneralByContainsInTitle(pageable, search));
+                } else {
+                    modelMap.addAttribute("question", service.searchGeneralByContainsInContain(pageable, search));
+                }
+            }
 
-        if(type.equals("general")){
-            Long number = Long.parseLong(no);
-            GeneralQuestion question = gservice.findByGeneralQuestionNo(number);
-            GeneralQuestion beforeQuestion = gservice.findByGeneralQuestionNo(number-1);
-            GeneralQuestion afterQuestion = gservice.findByGeneralQuestionNo(number+1);
-            modelMap.addAttribute("beforeQuestion", beforeQuestion);
-            modelMap.addAttribute("afterQuestion", afterQuestion);
-            modelMap.addAttribute("questionDetail", question);
-
-            return "customerservicelogin/loginQuestionDetail";
-        }else{
-            Long number = Long.parseLong(no);
-            OwnerQuestion question = oservice.findByOwnerQuestionNo(number);
-            OwnerQuestion beforeQuestion = oservice.findByOwnerQuestionNo(number-1);
-            OwnerQuestion afterQuestion = oservice.findByOwnerQuestionNo(number+1);
-            modelMap.addAttribute("beforeQuestion", beforeQuestion);
-            modelMap.addAttribute("afterQuestion", afterQuestion);
-            modelMap.addAttribute("questionDetail", question);
-
-            return "customerserviceowner/ownerQuestionDetail";
         }
 
+        return "customerService/question";
     }
 
-    @PostMapping("/Question/owner/create")
-    public OwnerQuestionResponse createOwner(@RequestBody OwnerQuestionRequest request) {
 
-        return oservice.create(request);
+    @GetMapping("/question/detail")
+    public String questionDetail(@RequestParam(required = false) String no, ModelMap modelMap) {
+
+        Long number = Long.parseLong(no);
+
+        GeneralQuestion question = service.findByGeneralQuestionNo(number);
+        GeneralQuestion beforeQuestion = service.findByGeneralQuestionNo(number - 1);
+        GeneralQuestion afterQuestion = service.findByGeneralQuestionNo(number + 1);
+        modelMap.addAttribute("beforeQuestion", beforeQuestion);
+        modelMap.addAttribute("afterQuestion", afterQuestion);
+        modelMap.addAttribute("questionDetail", question);
+
+        return "customerService/questionDetail";
     }
 
-    @PostMapping("/Question/general/create")
-    public GeneralQuestionResponse createGeneral(@RequestBody GeneralQuestionRequest request) {
-
-        return gservice.create(request);
+    @GetMapping("/question/write")
+    public String questionWriting() {
+        return "customerService/questionWriting";
     }
+
 
 }
+
+
+
+
+
+

@@ -3,8 +3,10 @@ package kk.second.dys.controller;
 import kk.second.dys.model.entity.Cafe;
 import kk.second.dys.service.CafeListPageService;
 import kk.second.dys.service.FoodListPageService;
+import kk.second.dys.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -19,31 +21,33 @@ public class CafeListController {
     @Autowired
    private CafeListPageService service;
 
-    @GetMapping({"/cafeList"})
+    @Autowired
+    private ReviewService reviewService;
+
+    @GetMapping({"/theme/cafeList"})
     public String cafeList(@RequestParam(required = false) String type, @PageableDefault Pageable pageable,
-                           @RequestParam(required = false, defaultValue = "") String  location,ModelMap modelMap,
-                           @RequestParam(required = false) String id) {
+                           @RequestParam(required = false, defaultValue = "") String location, ModelMap modelMap) {
         modelMap.addAttribute("type", type);
         modelMap.addAttribute("location", location);
-        if(location.equals("")){
+        Sort sort = new Sort(Sort.Direction.DESC, "recommend");
+        modelMap.addAttribute("cafeRank", service.ListReadForRank(sort));
+
+        if (location.equals("")) {
             modelMap.addAttribute("cafeList", service.findAll(pageable));
-        }else{
-            modelMap.addAttribute("cafeList", service.findFood(pageable, location));
+        } else {
+            modelMap.addAttribute("cafeList", service.findCafe(pageable, location));
         }
-        if(id == null){
-            return "themelist/cafeList";
-        }else{
-            return "themelistlogin/cafeListLogin";
-        }
+        return "themeList/cafeList";
     }
 
-    @GetMapping("/cafeDetail")
+    @GetMapping("/theme/cafeList/detail")
     public String foodDetail(@RequestParam(required = false) String  no, ModelMap modelMap) {
         Long number = Long.parseLong(no);
         Cafe cafe = service.findById(number);
         modelMap.addAttribute("cafe", cafe);
+        modelMap.addAttribute("reviewList", reviewService.findCafeReview(number) );
 
-        return "detail/cafeDetail";
+        return "themeList/detail/cafeDetail";
     }
 
 }

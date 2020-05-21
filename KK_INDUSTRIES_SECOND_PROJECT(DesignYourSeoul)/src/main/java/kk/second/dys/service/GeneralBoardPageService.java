@@ -1,8 +1,8 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.GeneralBoard;
-import kk.second.dys.model.netowrk.request.GeneralBoardRequest;
-import kk.second.dys.model.netowrk.response.GeneralBoardResponse;
+import kk.second.dys.model.network.request.GeneralBoardRequest;
+import kk.second.dys.model.network.response.GeneralBoardResponse;
 import kk.second.dys.repository.GeneralBoardRepository;
 import kk.second.dys.repository.GeneralUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,7 @@ public class GeneralBoardPageService {
     }
 
     public GeneralBoard findByGeneralBoardNo(Long no) {
-        return repository.findByGeneralBoardNo(no);
+        return repository.findByBoardNo(no);
     }
 
     public GeneralBoardResponse create(GeneralBoardRequest request) {
@@ -61,7 +61,7 @@ public class GeneralBoardPageService {
 
     private GeneralBoardResponse response (GeneralBoard generalBoard){
         GeneralBoardResponse generalBoardResponse = GeneralBoardResponse.builder()
-                .generalBoardNo(generalBoard.getGeneralBoardNo())
+                .generalBoardNo(generalBoard.getBoardNo())
                 .title(generalBoard.getTitle())
                 .content(generalBoard.getContent())
                 .registeredAt(generalBoard.getRegisteredAt())

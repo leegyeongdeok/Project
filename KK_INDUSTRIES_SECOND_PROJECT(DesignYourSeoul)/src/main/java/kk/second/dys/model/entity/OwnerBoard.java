@@ -21,7 +21,7 @@ public class OwnerBoard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ownerBoardNo;
+    private Long boardNo;
 
     private String title;
     private String content;

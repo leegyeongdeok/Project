@@ -1,7 +1,7 @@
 package kk.second.dys.controller;
 
-import kk.second.dys.model.netowrk.request.GeneralUserApiRequest;
-import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
+import kk.second.dys.model.network.request.GeneralUserApiRequest;
+import kk.second.dys.model.network.response.GeneralUserApiResponse;
 import kk.second.dys.service.GeneralUserApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

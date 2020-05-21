@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface GeneralQuestionRepository extends JpaRepository<GeneralQuestion, Long> {
 
-    GeneralQuestion findByGeneralQuestionNo(Long generalQuestionNo);
+    GeneralQuestion findByQuestionNo(Long generalQuestionNo);
     Page<GeneralQuestion> findAllByTitleContainsOrContentContains(String title, String content, Pageable pageable);
     Page<GeneralQuestion> findAllByContentContains(String content, Pageable pageable);
     Page<GeneralQuestion> findAllByTitleContains(String title, Pageable pageable);

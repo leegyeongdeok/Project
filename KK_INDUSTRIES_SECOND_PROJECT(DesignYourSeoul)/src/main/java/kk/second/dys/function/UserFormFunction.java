@@ -55,4 +55,9 @@ public class UserFormFunction {
         System.out.println(result.get());
         return result.get();
     }
+
+    @GetMapping("/get/general/{account}")
+    public Long getGeneralUserId(@PathVariable String account){
+        return grepository.findByAccount(account).getGeneralId();
+    }
 }

@@ -1,0 +1,33 @@
+/* 마이페이지 사이드 메뉴바 */
+#generalSide {
+    float: left;
+    width: 235px;
+    border: 0 none;
+    background: 0;
+    margin-top: 20px;
+    padding-left: 15px;
+    position: fixed;
+}
+
+.sideMenu {
+    overflow: hidden;
+    width: 235px;
+    text-align: left;
+}
+
+.menuLink{
+    margin: 45px 0;
+    cursor: pointer;
+}
+
+.menuLink p{
+    display: inline;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.menuLink img{
+    width: 20px;
+    height: 20px;
+    display: inline;
+}

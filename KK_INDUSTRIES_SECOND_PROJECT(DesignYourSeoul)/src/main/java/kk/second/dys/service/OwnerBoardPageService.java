@@ -1,11 +1,8 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.OwnerBoard;
-import kk.second.dys.model.entity.OwnerQuestion;
-import kk.second.dys.model.netowrk.request.OwnerBoardRequest;
-import kk.second.dys.model.netowrk.request.OwnerQuestionRequest;
-import kk.second.dys.model.netowrk.response.OwnerBoardResponse;
-import kk.second.dys.model.netowrk.response.OwnerQuestionResponse;
+import kk.second.dys.model.network.request.OwnerBoardRequest;
+import kk.second.dys.model.network.response.OwnerBoardResponse;
 import kk.second.dys.repository.OwnerBoardRepository;
 import kk.second.dys.repository.OwnerUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +45,7 @@ public class OwnerBoardPageService {
     }
 
     public OwnerBoard findByOwnerBoardNo(Long no) {
-        return repository.findByOwnerBoardNo(no);
+        return repository.findByBoardNo(no);
     }
 
     public OwnerBoardResponse create(OwnerBoardRequest request) {
@@ -67,7 +64,7 @@ public class OwnerBoardPageService {
 
     private OwnerBoardResponse response (OwnerBoard ownerBoard){
         OwnerBoardResponse ownerBoardResponse = OwnerBoardResponse.builder()
-                .ownerBoardNo(ownerBoard.getOwnerBoardNo())
+                .ownerBoardNo(ownerBoard.getBoardNo())
                 .title(ownerBoard.getTitle())
                 .content(ownerBoard.getContent())
                 .registeredAt(ownerBoard.getRegisteredAt())

@@ -1,9 +1,9 @@
 package kk.second.dys.function;
 
-import kk.second.dys.model.netowrk.request.GeneralBoardReplyRequest;
-import kk.second.dys.model.netowrk.request.OwnerBoardReplyRequest;
-import kk.second.dys.model.netowrk.response.GeneralBoardReplyResponse;
-import kk.second.dys.model.netowrk.response.OwnerBoardReplyResponse;
+import kk.second.dys.model.network.request.GeneralBoardReplyRequest;
+import kk.second.dys.model.network.request.OwnerBoardReplyRequest;
+import kk.second.dys.model.network.response.GeneralBoardReplyResponse;
+import kk.second.dys.model.network.response.OwnerBoardReplyResponse;
 import kk.second.dys.service.GeneralBoardReplyService;
 import kk.second.dys.service.OwnerBoardReplyService;
 import org.springframework.beans.factory.annotation.Autowired;

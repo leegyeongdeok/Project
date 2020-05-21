@@ -1,10 +1,8 @@
 package kk.second.dys.controller;
-import kk.second.dys.model.entity.OwnerUser;
-import kk.second.dys.model.netowrk.request.OwnerUserApiRequest;
-import kk.second.dys.model.netowrk.response.OwnerUserApiResponse;
+import kk.second.dys.model.network.request.OwnerUserApiRequest;
+import kk.second.dys.model.network.response.OwnerUserApiResponse;
 import kk.second.dys.service.OwnerUserApiService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

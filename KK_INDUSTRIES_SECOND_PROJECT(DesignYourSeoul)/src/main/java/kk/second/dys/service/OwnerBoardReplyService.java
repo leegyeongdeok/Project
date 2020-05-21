@@ -1,12 +1,8 @@
 package kk.second.dys.service;
 
-import kk.second.dys.model.entity.OwnerBoard;
 import kk.second.dys.model.entity.OwnerBoardReply;
-import kk.second.dys.model.entity.OwnerQuestion;
-import kk.second.dys.model.netowrk.request.OwnerBoardReplyRequest;
-import kk.second.dys.model.netowrk.request.OwnerQuestionRequest;
-import kk.second.dys.model.netowrk.response.OwnerBoardReplyResponse;
-import kk.second.dys.model.netowrk.response.OwnerQuestionResponse;
+import kk.second.dys.model.network.request.OwnerBoardReplyRequest;
+import kk.second.dys.model.network.response.OwnerBoardReplyResponse;
 import kk.second.dys.repository.OwnerBoardReplyRepository;
 import kk.second.dys.repository.OwnerBoardRepository;
 import kk.second.dys.repository.OwnerUserRepository;
@@ -74,7 +70,7 @@ public class OwnerBoardReplyService {
                 .reply(reply.getReply())
                 .registeredAt(reply.getRegisteredAt())
                 .updatedAt(reply.getUpdatedAt())
-                .ownerBoardNo(reply.getOwnerBoard().getOwnerBoardNo())
+                .ownerBoardNo(reply.getOwnerBoard().getBoardNo())
                 .ownerId(reply.getOwnerUser().getOwnerId())
                 .build();
         return ownerQuestionResponse;

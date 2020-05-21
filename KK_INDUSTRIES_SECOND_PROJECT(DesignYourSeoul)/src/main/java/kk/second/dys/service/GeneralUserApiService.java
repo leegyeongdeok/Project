@@ -1,8 +1,8 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.GeneralUser;
-import kk.second.dys.model.netowrk.request.GeneralUserApiRequest;
-import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
+import kk.second.dys.model.network.request.GeneralUserApiRequest;
+import kk.second.dys.model.network.response.GeneralUserApiResponse;
 import kk.second.dys.repository.GeneralUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

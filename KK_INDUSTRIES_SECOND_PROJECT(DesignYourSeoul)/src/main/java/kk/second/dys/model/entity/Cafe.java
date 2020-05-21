@@ -17,12 +17,12 @@ public class Cafe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long CafeId;
+    private Long cafeId;
 
     private String name;
     private String callNumber;
     private String address;
-    private String rink;
+    private String link;
     private String cafeTheme;
     private Integer recommend;
 

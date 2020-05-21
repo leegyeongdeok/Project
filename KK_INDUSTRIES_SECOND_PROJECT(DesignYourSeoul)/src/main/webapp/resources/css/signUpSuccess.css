@@ -1,0 +1,62 @@
+
+.success_box {
+    width: 100vw;
+    margin-top: 10vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.success_title {
+    width: 100vw;
+    text-align: center;
+}
+
+.success_title> h1{
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.title_img {
+    width: 40vw;
+}
+
+.success_body {
+    width: 100vw;
+    text-align: center;
+}
+
+.success_body> p{
+    font-size: 1.2em;
+}
+
+.btn_contain{
+    width: 40vw;
+    margin: 2vh auto;
+    overflow: hidden;
+}
+
+.success_button, .success_button_right {
+    border-radius: 8px;
+    width: 15vw;
+    float: left;
+    background-color: orange;
+    text-align: center;
+    height: 35px;
+}
+
+.success_button_right{
+    float: right;
+}
+
+.success_button> a, .success_button_right>a{
+    text-decoration: none;
+    color: black;
+}
+
+.button_value {
+    font-size: 20px;
+}
+

@@ -1,0 +1,205 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fp-viewing-0-slide1{
+    overflow: auto !important;
+}
+
+.image img {
+    margin: 5px;
+    width: calc((100vw - 200px) / 5);
+    height: calc((100vw - 200px) / 5);
+}
+
+.headerimage {
+    overflow:hidden;
+    display: inline-block;
+    width: 90vw;
+    height: 45vh;
+    margin-left: 5vw;
+    padding-bottom:25px;
+    text-align: center;
+}
+
+.slide_cotent{
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.list_detail, .listReviewList{
+    margin-top: 20px;
+}
+.every{
+    width: 100vw;
+}
+
+.listTable{
+    padding: 20px 0;
+    position: relative;
+}
+.listTable th {
+    width: 110px;
+    line-height: 1.7;
+    text-align: left;
+    vertical-align: top;
+    padding-right: 10px;
+    padding-bottom: 5px;
+
+}
+
+ol, ul, ul li {
+    list-style: none;
+}
+
+
+
+fieldset{
+    border: 0;
+}
+.review_bar {
+    display: inline-block;
+    width: 40vw;
+    height: 45px;
+    border: 2px solid orange;
+    background-color: #fff;
+}
+.input_text {
+    margin: 12px 0 0 9px;
+    width: 485px;
+    height: 23px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    *ime-mode: active;
+}
+.sch_smit {
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    overflow: visible;
+    width: 80px;
+    height: 30px;
+    border: 0;
+    background: orange;
+}
+.listReviewItem {
+    position: relative;
+    border-bottom: 1px solid #DBDBDB;
+}
+.listReviewItem__User{
+    display: flex;
+    padding: 5px 0 5px 0;
+    border-top: solid 1px orange;
+}
+.listReviewList__Header{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.inline, .title{
+    padding-bottom:10px;
+    border-bottom: 1px solid orange;
+}
+
+.side-wrap {
+    position: relative;
+    float: right;
+
+}
+.map_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.left{
+    float: left;
+    width: 40vw;
+}
+.right{
+    position: relative;
+    float: right;
+    width: 40vw;
+    margin-right: 7vw;
+}
+.listReviewItem__UserNickName{
+    margin-right: 60%;
+}
+.listReviewItem__ReviewText{
+    margin-top: 20px;
+}
+.listReviewItem__ReviewDate{
+    font-size: 14px;
+}
+.map-container{
+    margin: 20px 45px;
+
+    width: 40vw;
+    height: 40vw;
+}
+.space{
+    width: 100vw;
+    margin-left: 7vw;
+    margin-bottom: 100px;
+    border-top: 1px solid orange;
+
+}
+.update_date{
+    text-align: right;
+}
+
+.like{
+    margin-left:10px;
+    width: 30px;
+    height: 30px;
+    background-image: url(/resources/image/courseRanking/like.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0 ;
+    float: right;
+}
+.share{
+    margin-left:10px;
+    width: 30px;
+    height: 30px;
+    background-image: url(/resources/image/courseRanking/share.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0 ;
+    float: right;
+}
+.list_name{
+    margin-bottom: 15px;
+
+}
+.countLike{
+    float: right;
+    padding-top: 9px;
+    margin-left:5px ;
+
+}
+.update_date{
+    font-size: 13px;
+}
+
+.review_nickName{
+    margin-left: 1vw;
+    width: 6vw;
+}
+
+.review_content{
+    width: 22vw;
+    margin-left: 1vw;
+    margin-right: 2vw;
+}

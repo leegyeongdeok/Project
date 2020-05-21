@@ -1,8 +1,6 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.*;
-import kk.second.dys.model.netowrk.response.AccommodationResponse;
-import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
 import kk.second.dys.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

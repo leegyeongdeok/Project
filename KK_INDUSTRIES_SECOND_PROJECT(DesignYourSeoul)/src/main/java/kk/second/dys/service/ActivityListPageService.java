@@ -1,13 +1,17 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.Activity;
-import kk.second.dys.model.entity.Cafe;
+import kk.second.dys.model.network.response.ActivityApiResponse;
 import kk.second.dys.repository.ActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ActivityListPageService {
@@ -29,8 +33,38 @@ public class ActivityListPageService {
         return repository.findAllByAddressContains(location, pageable);
     }
 
+    public List<ActivityApiResponse> ListReadForRank(Sort sort) {
+        List<Activity>  activityList=  repository.findTop10By(sort);
+        List<ActivityApiResponse> result = new ArrayList<>();
+
+        for (Activity a:activityList){
+            result.add(response(a));
+        }
+        return result;
+    }
+
 
     public Activity findById(Long number) {
         return repository.getOne(number);
+    }
+
+    private ActivityApiResponse response (Activity activity){
+
+        if(activity == null){
+            System.out.println("null");
+            return null;
+        }else{
+            ActivityApiResponse activityApiResponse = ActivityApiResponse.builder()
+                    .activityId(activity.getActivityId())
+                    .name(activity.getName())
+                    .callNumber(activity.getCallNumber())
+                    .address(activity.getAddress())
+                    .link(activity.getLink())
+                    .activityType(activity.getActivityType())
+                    .recommend(activity.getRecommend())
+                    .areaId(activity.getArea().getAreaId())
+                    .build();
+            return activityApiResponse;
+        }
     }
 }

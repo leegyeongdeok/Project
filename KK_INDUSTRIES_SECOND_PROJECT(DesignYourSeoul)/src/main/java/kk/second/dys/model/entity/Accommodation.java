@@ -22,7 +22,7 @@ public class Accommodation {
     private String name;
     private String callNumber;
     private String address;
-    private String rink;
+    private String link;
     private Integer grade;
     private Integer recommend;
 

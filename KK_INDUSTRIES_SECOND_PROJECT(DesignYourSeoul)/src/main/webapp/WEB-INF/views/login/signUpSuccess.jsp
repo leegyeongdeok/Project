@@ -1,107 +1,56 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+         pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <link rel=" shortcut icon" href="/image/favicon_black.ico" style="user-select: auto;">
+    <link rel="icon" href="resources/image/favicon_black.ico">
+    <style type="text/css">
+        @-ms-viewport {
+            width: device-width
+        }
 
-<style>
+        @-o-viewport {
+            width: device-width
+        }
 
+        @viewport {
+            width: device-width
+        }
+    </style>
 
-
-
-
-.success_box {
-	width: 60%;
-	margin: 0 auto;
-	margin-top: 10%;
-	margin-left: 410px;
-	min-height: 727px;
-}
-
-body{
-	margin: 0;
-	padding: 0;
-}
-
-.success_title {
-	width: 50%;
-    margin: 0 auto;
-}
-
-.title_img {
-	margin-left: 17%;
-}
-
-.title {
-	margin-left: 11%;
-	margin-top: -2%;
-}
-
-.success_body {
-	width: 55%;
-    margin: 0 auto;
-    margin-left: 25%;
-}
-
-.success_body> p{
-	text-align: center;
-	margin-right: 17%;
-	font-size: 17px;
-	
-}
-
-.success_button {
-	border-radius: 8px;
-	width: 15%;
-    margin: 0 auto;
-    float: left;
-    margin-left: 31%;
-    background-color: orange;
-    text-align: center;
-    height: 35px;
-    padding-top: 4px;
-    margin-top: 2%;
-}
-
-.success_button> a{
-	text-decoration: none;
-	color: black;
-}
-
-.button_value {
-	font-size: 20px;
-}
-.title_img {
-	width: 300px;
-	height: 300px;
-}
-
-
-</style>
-
+    <title>Design Your Seoul</title>
+    <link rel="stylesheet" href="/resources/css/signUpSuccess.css">
 
 </head>
 <body>
 <div class="success_box">
-	<div class="success_title">
-		<img class="title_img" src="/resources/image/logo.png">
-		<h1 class="title">회원가입이 완료되었습니다.</h1>
-	</div>
-	
-	<div class="success_body">
-		<p class="nickNameText", id = nickNameText><span id="user_id" ></span> ${name}님의 회원가입을 축하합니다.<br />
-		다양한 컨텐츠와 실속있는 서비스로 찾아뵙겠습니다.</p>
-	</div>
+    <div class="success_title">
+        <img class="title_img" src="/resources/image/logo.png">
+        <h1 class="title">회원가입이 완료되었습니다.</h1>
+    </div>
 
-	
-	<div class="success_button">
-		<a href="login"><span class="button_value">로그인</span></a>
-	</div>
-	<div class="success_button" style="margin-left: 3%">
-		<a href="/dys"><span class="button_value">메인홈</span></a>
-	</div>
+    <div class="success_body">
+        <p>
+            회원님의 회원가입을 축하합니다.<br/>
+            다양한 컨텐츠와 실속있는 서비스로 찾아뵙겠습니다.
+        </p>
+    </div>
+
+    <div class="btn_contain">
+        <button class="success_button">
+            <a href="login"><span class="button_value">로그인</span></a>
+        </button>
+        <button class="success_button_right">
+            <a href="/dys"><span class="button_value">메인홈</span></a>
+        </button>
+    </div>
 </div>
 </body>
 </html>

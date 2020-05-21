@@ -19,6 +19,7 @@
             padding: 0;
             width: 100%;
             height: 100%;
+            overflow: hidden;
         }
 
         .box {
@@ -27,18 +28,9 @@
             position: relative;
             color: #ffffff;
             font-size: 24pt;
+            overflow: hidden;
         }
 
-        .box2 {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            color: #ffffff;
-            font-size: 24pt;
-        }
 
         /* 1페이지 */
         #content {
@@ -468,7 +460,7 @@
     </script>
 
 </head>
-<body style="overflow: auto; overflow-x:hidden;">
+<body>
 
 <%
     String userName = request.getParameter("name");

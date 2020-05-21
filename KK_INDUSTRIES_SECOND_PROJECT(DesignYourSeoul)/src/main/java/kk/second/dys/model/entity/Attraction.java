@@ -22,7 +22,7 @@ public class Attraction {
     private String name;
     private String callNumber;
     private String address;
-    private String rink;
+    private String link;
     private String attractionType;
     private Integer recommend;
 
