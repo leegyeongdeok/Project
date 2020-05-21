@@ -1,0 +1,41 @@
+.sidebar {
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    height: 100vh;
+    width: 10vw;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+#menu {
+    text-align: center;
+    margin-top: 5vh;
+    color: black;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    user-select: auto;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.menu_item {
+    text-align: center;
+    margin-top: 5vh;
+    color: rgba(255, 255, 255, 0);
+    text-orientation: mixed;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+    user-select: auto;
+    cursor: pointer;
+    display:none;
+}

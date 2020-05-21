@@ -1,0 +1,68 @@
+html,
+body {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.logo_other {
+  position: fixed;
+  top: 0px;
+  padding-top: 3vh;
+  margin-left: 3vw;
+  margin-top: 0;
+  font-size: 5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+#first_sec {
+  height: 40%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.sec_logo {
+  margin: 0;
+  font-size: 72px;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  position: absolute;
+}
+
+.sorry {
+  font-size: 40px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+
+}
+
+
+#second_sec {
+  top: 40%;
+  width: 100%;
+  background-size: cover;
+  background-color: white;
+  position: absolute;
+}
+
+
+
+
+

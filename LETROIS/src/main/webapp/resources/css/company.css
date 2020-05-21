@@ -1,0 +1,138 @@
+html,
+body {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#first_sec{
+  height: 40%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.sec_logo{
+  margin: 0;
+  font-size: 72px;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  position: absolute;
+}
+
+
+
+#second_sec{
+  width: 100%;
+  background-size: cover;
+  background-color: white;
+  position: absolute;
+}
+
+.sec_second_log{
+  font-weight: normal;
+  font-family: sans-serif;
+  font-size: 40px;
+  margin-left: 5vw;
+  margin-top: 8vh;
+  margin-bottom: 0;
+}
+
+.content_name{
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 25px;
+  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-bottom: 0;
+  color: #444444;
+}
+
+.content{
+  font-weight: 200;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  margin-top: 3.5vh;
+  margin-right: 5vw;
+  letter-spacing: 0.02em;
+  line-height: 1.6em;
+}
+
+#intro_all{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture_wi{
+  margin-top: 1vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  width: 80vw;
+  height: auto;
+}
+
+.picture_he{
+  margin-top: 1vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.company_all{
+  margin-left: 5vw;
+}
+
+.intro_area{
+  height: auto;
+  margin-top: 7vh;
+  flex-direction: row;
+  overflow: hidden;
+  margin-bottom: 10vh;
+}
+
+.picture_right{
+  margin-left: 5vw;
+  float: left;
+}
+
+.company_left{
+  margin-top: 0;
+  width: 35vw;
+  margin-left: 5vw;
+  float: right;
+}
+
+.picture_left{
+  margin-right: 5vw;
+  width: 47vw;
+  float: right;
+}
+
+.company_right{
+  margin-top: 0;
+  margin-left: 5vw;
+  width: 35vw;
+  margin-left: 5vw;
+  float: left;
+}
+
+.name_tag{
+  float: right;
+  font-size: 3.5vw;
+  font-style:italic;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 900;
+}
+
+

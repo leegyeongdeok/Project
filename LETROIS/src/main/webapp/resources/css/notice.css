@@ -1,0 +1,82 @@
+html,
+body {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.logo_other {
+  position: fixed;
+  top: 0px;
+  padding-top: 3vh;
+  margin-left: 3vw;
+  margin-top: 0;
+  font-size: 5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+#first_sec {
+  height: 40%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.sec_logo {
+  margin: 0;
+  font-size: 72px;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  position: absolute;
+}
+
+#second_sec {
+  top: 40%;
+  width: 100%;
+  background-size: cover;
+  background-color: white;
+  position: absolute;
+}
+#notice_talbe{
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 10px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+#notice_cap{
+  font-size: 3vw;
+  font-weight: bold;
+  border-bottom: 2px solid #bcbcbc;
+}
+
+#tb_title, #tb_date{
+ text-align: justify;
+ border-bottom: 2px solid #bcbcbc;
+}
+
+.class{
+  background-color: yellow;
+ }
+
+ .notice_title, .notice_date{
+  border-bottom: 10px solid rgba(0, 0, 0, 0);
+ }
+.notice_tag{
+  color: black;
+}
+

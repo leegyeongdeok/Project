@@ -1,0 +1,35 @@
+.sidebar {
+    background-color: black;
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+#menu {
+    text-align: center;
+    margin-top: 5vh;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    user-select: auto;
+    cursor: pointer;
+}
+
+.menu_item {
+    text-align: center;
+    margin-top: 6vh;
+    color: white;
+    text-orientation: mixed;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+    user-select: auto;
+    cursor: pointer;
+    display:block;
+}

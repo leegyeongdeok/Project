@@ -1,0 +1,14 @@
+.logo_other {
+    position: fixed;
+    top: 0px;
+    padding-top: 3vh;
+    margin-left: 3vw;
+    margin-top: 0;
+    font-size: 5vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+    user-select: auto;
+    cursor: default;
+}

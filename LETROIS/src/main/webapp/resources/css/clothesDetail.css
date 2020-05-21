@@ -1,0 +1,321 @@
+@import url('/resources/css/bootstrap-4.4.1.min.css');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+html,
+body {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#first_sec {
+    height: 40%;
+    width: 100%;
+    top: 0;
+    background-size: cover;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.sec_logo {
+    margin: 0;
+    font-size: 72px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    position: absolute;
+}
+
+#second_sec {
+    top: 40%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+}
+
+.clothes_first_sec {
+    padding-top: 5vh;
+    margin-bottom: 20vh;
+    position: static;
+}
+
+
+.picture_he {
+    width: 47vw;
+    margin-top: 1vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.picture_right {
+    margin-left: 5vw;
+    float: left;
+}
+
+.content {
+    font-weight: 200;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    margin: 0 7vw;
+    letter-spacing: 0.02em;
+    line-height: 1.6em;
+}
+
+.clothes_content {
+    margin-top: 0;
+    width: 40vw;
+    margin-left: 5vw;
+    float: right;
+}
+
+.clothes_content_2 {
+    margin: 0 5vw;
+    padding-top: 250px;
+    width: 90vw;
+
+}
+
+.detail_explain {
+    border-top: 2px solid rgba(110, 110, 110, 0.78);
+    font-size: 2em;
+    color: #5a5a5a;
+}
+
+.clothes_name {
+    font-size: 4.5vw;
+    font-weight: bold;
+}
+
+.clothes_price {
+    margin: 40px 0 7px 0;
+    font-size: 3vw;
+}
+
+#buy_clothes {
+    float: left;
+    margin: 20px 0 0 0;
+    padding: 0;
+    background-color: rgb(94, 94, 94);
+    color: white;
+    font-size: 25px;
+    width: 35vw;
+    height: 60px;
+}
+
+.clothes_info_head {
+    color: #666666;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.clothes_info_wrap {
+    letter-spacing: 0.02em;
+    line-height: 1.5vw;
+}
+
+.clothes_info {
+    color: #7a7a7a;
+    font-size: 2vw;
+}
+
+
+.clothes_detail {
+    margin: 5vh 5vw;
+    width: 90vw;
+}
+
+.clothes_themeLogo {
+    margin: 20px 0;
+    width: 90vw;
+    overflow: hidden;
+}
+
+.themeLogo_wrap {
+    margin-top: 100px;
+    width: auto;
+    text-align: center;
+}
+
+.themeLogo {
+    width: 40vw;
+}
+
+.themeLogoIntro_wrap {
+    margin-bottom: 200px;
+    width: auto;
+    text-align: center;
+}
+
+.themeLogoIntro {
+    width: 60vw;
+}
+
+.img_eventer_up{
+    position: relative;
+    -webkit-animation: blink 1.0s linear infinite;
+    -moz-animation: blink 1.0s linear infinite;
+    animation: blink 1.0s linear infinite;
+    -o-animation: blink 1.0s linear infinite;
+}
+
+@keyframes blink {
+    from{color: black;}
+    to{color: white;}
+}
+
+.clothes_pattern {
+    width: 90vw;
+    overflow: hidden;
+}
+
+.pattern_wrap {
+    margin: 0;
+    width: auto;
+    text-align: center;
+}
+
+.pattern {
+    width: 45vw;
+}
+
+.clothes_sizeChart_wrap {
+    margin-bottom: 100px;
+    width: 90vw;
+    text-align: center;
+
+}
+
+.clothes_sizeChart {
+    margin-top: 50px;
+    width: 50vw;
+}
+
+.detail_info_wrap {
+    margin: 0 0 50px 20vw;
+    width: 50vw;
+    border: 2.5px solid black;
+}
+
+.clothes_detail_info{
+    margin: 15px 0 5px 20px;
+    color: #7a7a7a;
+    font-size: 1.2em;
+}
+
+.washing_waring{
+    color: red;
+    margin-top: 0;
+}
+
+.wash_icon{
+   width: 5em;
+}
+
+.detail_more_info_wrap{
+    margin-top: 150px;
+    width: 90vw;
+    font-size: 30px;
+}
+
+.clothes_detail_info_tit{
+    font-size: 1em;
+}
+
+.clothes_more_detail_info{
+    font-size: 0.6em;
+    color: #7a7a7a;
+}
+
+.snap_explain, .detailCut_explain {
+    margin-top: 200px;
+    border-top: 2px solid rgba(110, 110, 110, 0.78);
+    font-size: 2em;
+    color: #5a5a5a;
+}
+
+
+.clothes_detailCut_wrap, .clothes_snapShot_wrap {
+    width: 90vw;
+    overflow: hidden;
+}
+
+.snapShot {
+    margin-top: 10vw;
+    width: 44vw;
+}
+
+.ss_none {
+    display: none;
+}
+
+
+.btn_more {
+    width: 90vw;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2.5px outset blue;
+    color: blue;
+}
+
+.snapShot_remote {
+    left: 5vw;
+    position: absolute;
+}
+
+.snapShot_now {
+    text-align: center;
+}
+
+.clothes_detailCut {
+    width: 90vw;
+  text-align: center;
+}
+
+.detailCut{
+    width: 60vw;
+}
+
+.dc_left, .ss_left {
+    float: left;
+}
+
+.dc_right, .ss_right {
+    float: right;
+}
+
+.detailCut_content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.exchange_return {
+    width: 90%;
+    margin: 100px 5vw 100px 5vw;
+    border-top: 2px solid rgba(110, 110, 110, 0.78);
+}
+
+.exchange_return_tit {
+    margin-top: 10px;
+    color: rgba(55, 55, 55, 0.66);
+    font-size: 18px;
+}
+
+.exchange_return_content {
+    font-weight: 200;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    margin: 0 7vw;
+    letter-spacing: 0.02em;
+    line-height: 2.2em;
+
+}
