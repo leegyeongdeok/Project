@@ -19,24 +19,30 @@ public class ChatClient extends Application {
 
 	Socket socket;
 	TextArea textArea;
+	Button btnSend;
+	Button btnSwitch;
+	TextField input;
 	String userName;
 	String Position;
 	String ip;
 	int port;
-	Boolean checker = false;
+	Boolean checker = true;
 
 	// 클라이언트 프로그램 작동
 	public void startClient(String ip, int port) {
+
 		Thread thread = new Thread() {
 			public void run() {
 				try {
 					socket = new Socket(ip, port);
-					checker= true;
+					startManager();
 					receive();
 				} catch (Exception e) {
+					checker = false;
 					textArea.appendText("Check the IP and Port you enterd \n");
 					return;
 				}
+
 			}
 		};
 		thread.start();
@@ -45,7 +51,7 @@ public class ChatClient extends Application {
 	// 클라이언트 종료
 	public void stopClient() {
 		try {
-			if(socket != null && ! socket.isClosed()) {
+			if (socket != null && !socket.isClosed()) {
 				socket.close();
 			}
 		} catch (Exception e) {
@@ -61,9 +67,10 @@ public class ChatClient extends Application {
 				InputStream in = socket.getInputStream();
 				byte[] buffer = new byte[512];
 				int length = in.read(buffer);
-				if(length == -1) throw new IOException();
+				if (length == -1)
+					throw new IOException();
 				String message = new String(buffer, 0, length, "UTF-8");
-				Platform.runLater(()->{
+				Platform.runLater(() -> {
 					textArea.appendText(message);
 				});
 			} catch (IOException e) {
@@ -90,7 +97,7 @@ public class ChatClient extends Application {
 		};
 		thread.start();
 	}
-	
+
 	public void setUser(String Position, String name, String ip, int port) {
 		this.userName = name;
 		this.Position = Position;
@@ -112,49 +119,38 @@ public class ChatClient extends Application {
 		primaryStage.setX(1200);
 		primaryStage.setY(200);
 		primaryStage.show();
-		
-		
-		Button btnSend = (Button) root.lookup("#btnSend");
-		Button btnSwitch = (Button) root.lookup("#btnSwitch");
+
+		btnSend = (Button) root.lookup("#btnSend");
+		btnSwitch = (Button) root.lookup("#btnSwitch");
+		input = (TextField) root.lookup("#txtSend");
 		textArea = (TextArea) root.lookup("#txtChat");
-		TextField input = (TextField) root.lookup("#txtSend");
-		
+
 		textArea.setDisable(true);
 		input.setDisable(true);
 		btnSend.setDisable(true);
-		
-		input.setOnKeyPressed(event ->{
+
+		input.setOnKeyPressed(event -> {
 			if (event.getCode().equals(KeyCode.ENTER)) {
-				send("["+Position+"]" +userName+ ": "+input.getText()+"\n");
+				send("[" + Position + "]" + userName + ": " + input.getText() + "\n");
 				input.setText("");
 				input.requestFocus();
 			}
 		});
-		
+
 		btnSend.setOnAction(event -> {
-			send("["+Position+"]: "+input.getText()+"\n");
+			send("[" + Position + "]: " + input.getText() + "\n");
 			input.setText("");
 			input.requestFocus();
 		});
-		
-		btnSwitch.setOnAction(event ->{
-			if(btnSwitch.getText().equals("Connection")) {
+
+		btnSwitch.setOnAction(event -> {
+			if (btnSwitch.getText().equals("Connection")) {
 				startClient(ip, port);
-				if(checker) {
-					Platform.runLater(()->{
-						textArea.appendText("[ "+userName+" connection Chat ] \n");
-					});
-					btnSwitch.setText("Termination");
-					textArea.setDisable(false);
-					input.setDisable(false);
-					btnSend.setDisable(false);
-					input.requestFocus();
-				}
-				
-			}else {
+
+			} else {
 				stopClient();
-				Platform.runLater(()->{
-					textArea.appendText("[ "+userName+" termination Chat ] \n");
+				Platform.runLater(() -> {
+					textArea.appendText("[ " + userName + " termination Chat ] \n");
 				});
 				btnSwitch.setText("Connection");
 				textArea.setDisable(true);
@@ -162,9 +158,18 @@ public class ChatClient extends Application {
 				btnSend.setDisable(true);
 			}
 		});
-		
-		
-		
+	}
+
+	public void startManager() {
+		Platform.runLater(() -> {
+			textArea.appendText("[ " + userName + " connection Chat ] \n");
+			btnSwitch.setText("Termination");
+			textArea.setDisable(false);
+			input.setDisable(false);
+			btnSend.setDisable(false);
+			input.requestFocus();
+		});
+
 	}
 
 }
