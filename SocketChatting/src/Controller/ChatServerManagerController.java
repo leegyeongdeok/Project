@@ -38,7 +38,7 @@ public class ChatServerManagerController implements Initializable {
 		String port = txtPort.getText();
 		
 		String numMatcher = "^[0-9]*$";
-		String ipMatcher = "([0-9]{1,3}) \\. ([0-9]{1,3}) \\. ([0-9]{1,3}) \\. ([0-9]{1,3})"; 
+		String ipMatcher = "([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})"; 
 				
 		
 		if(port.trim().length() != 4 || !port.matches(numMatcher) ) {
