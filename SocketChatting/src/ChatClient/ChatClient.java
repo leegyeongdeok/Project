@@ -148,10 +148,9 @@ public class ChatClient extends Application {
 				startClient(ip, port);
 
 			} else {
+				send("[ " + userName + " termination Chat ] \n");
 				stopClient();
-				Platform.runLater(() -> {
-					textArea.appendText("[ " + userName + " termination Chat ] \n");
-				});
+				
 				btnSwitch.setText("Connection");
 				textArea.setDisable(true);
 				input.setDisable(true);
@@ -161,8 +160,8 @@ public class ChatClient extends Application {
 	}
 
 	public void startManager() {
+		send("[ " + userName + " connection Chat ] \n");
 		Platform.runLater(() -> {
-			textArea.appendText("[ " + userName + " connection Chat ] \n");
 			btnSwitch.setText("Termination");
 			textArea.setDisable(false);
 			input.setDisable(false);

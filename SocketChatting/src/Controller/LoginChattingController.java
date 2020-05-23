@@ -43,7 +43,7 @@ public class LoginChattingController implements Initializable {
 		String ipMatcher = "([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})"; 
 				
 		
-		if(port.trim().length() != 4 || !port.matches(numMatcher) ) {
+		if(!port.matches(numMatcher) ) {
 			viewAlert();
 		}else if(!ip.matches(ipMatcher)) {
 			if(ip.equals("localhost")) {
