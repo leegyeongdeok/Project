@@ -18,13 +18,12 @@ public class NoticeController {
     @Autowired
    private NoticePageService service;
 
-    @GetMapping({"/notice"})
-    public String noticeList(@RequestParam(required = false, defaultValue = "")  String search,
-                             @RequestParam(required = false, defaultValue = "all") String searchType, @PageableDefault Pageable pageable, ModelMap modelMap) {
-        modelMap.addAttribute("searchType", searchType);
+    @GetMapping({"/Notice"})
+    public String noticeList(@RequestParam(required = false) String type, @RequestParam(required = false, defaultValue = "")  String search,
+                             @RequestParam(required = false, defaultValue = "all") String stype, @PageableDefault Pageable pageable, ModelMap modelMap) {
+        modelMap.addAttribute("stype", stype);
         modelMap.addAttribute("search", search);
-
-      /*  modelMap.addAttribute("type", type);
+        modelMap.addAttribute("type", type);
 
         if(type.equals("owner")){
             if (search.equals("")){
@@ -40,23 +39,28 @@ public class NoticeController {
                 }
             }
 
-            return "customerserviceowner/ownerNotice";*/
-
-            if (searchType.equals("")){
+            return "customerserviceowner/ownerNotice";
+        }else if(type.equals("general")){
+            if (search.equals("")){
                 modelMap.addAttribute("generalNotice", service.findNoticeList(pageable));
             }else{
-                if(searchType.equals("all")){
+                if(stype.equals("all")){
                     modelMap.addAttribute("generalNotice", service.searchAllNoticeList(pageable, search));
-                }else if(searchType.equals("title")){
+                }else if(stype.equals("title")){
                     modelMap.addAttribute("generalNotice", service.searchTitleNoticeList(pageable, search));
+                    System.out.println("title");
                 }else{
                     modelMap.addAttribute("generalNotice", service.searchContentNoticeList(pageable, search));
                 }
             }
-            return "customerService/notice";
+            return "customerservicelogin/loginNotice";
+        }else{
+            return null;
+        }
+
     }
 
-    @GetMapping("/notice/detail")
+    @GetMapping("/NoticeDetail")
     public String noticeDetail(@RequestParam(required = false) String  no, ModelMap modelMap) {
         Long number = Long.parseLong(no);
         Notice notice = service.findByNoticeNo(number);
@@ -69,7 +73,7 @@ public class NoticeController {
         modelMap.addAttribute("afterNotice", afterNotice);
         modelMap.addAttribute("noticeDetail", notice);
 
-        return "customerService/noticeDetail";
+        return "customerserviceowner/ownerNoticeDetail";
     }
 
 }

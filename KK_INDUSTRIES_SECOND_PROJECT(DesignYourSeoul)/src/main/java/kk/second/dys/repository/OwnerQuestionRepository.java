@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OwnerQuestionRepository extends JpaRepository<OwnerQuestion, Long> {
 
-    OwnerQuestion findByQuestionNo(Long ownerQuestionNo);
+    OwnerQuestion findByOwnerQuestionNo(Long ownerQuestionNo);
     Page<OwnerQuestion> findAllByTitleContainsOrContentContains(String title, String content, Pageable pageable);
     Page<OwnerQuestion> findAllByOwnerUserAccount(String account, Pageable pageable);
     Page<OwnerQuestion> findAllByContentContains(String content, Pageable pageable);

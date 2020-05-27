@@ -21,7 +21,7 @@ public class GeneralQuestion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long questionNo;
+    private Long generalQuestionNo;
 
     private String title;
     private String content;

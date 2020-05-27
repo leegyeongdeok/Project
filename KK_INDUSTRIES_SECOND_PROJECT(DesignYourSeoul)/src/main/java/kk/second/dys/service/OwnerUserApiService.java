@@ -1,14 +1,15 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.OwnerUser;
-import kk.second.dys.model.network.request.OwnerUserApiRequest;
-import kk.second.dys.model.network.response.OwnerUserApiResponse;
+import kk.second.dys.model.netowrk.request.OwnerUserApiRequest;
+import kk.second.dys.model.netowrk.response.OwnerUserApiResponse;
 import kk.second.dys.repository.OwnerUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OwnerUserApiService {

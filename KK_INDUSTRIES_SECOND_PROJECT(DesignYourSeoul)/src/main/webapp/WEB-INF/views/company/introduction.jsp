@@ -1,39 +1,82 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html lang="ko">
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta content="yes" name="apple-mobile-web-app-capable"/>
-	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
-	<link rel=" shortcut icon" href="/image/favicon_black.ico" style="user-select: auto;">
-	<link rel="icon" href="resources/image/favicon_black.ico">
-	<style type="text/css">
-		@-ms-viewport {
-			width: device-width
-		}
 
-		@-o-viewport {
-			width: device-width
-		}
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,300,400,500,600,700,800,900&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
 
-		@viewport {
-			width: device-width
-		}
-	</style>
+<style>
+body {
+	height: 100%;
+}
 
-	<title>Company Intro</title>
+.introduction_box {
+	width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
 
-	<link href="/resources/css/companyIntro.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,300,400,500,600,700,800,900&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+.introduction_title{
+    width: 90%;
+    font-size: 22pt;
+    margin-top: 10%;
+    font-weight: 100;
+    font-family: Big Shoulders Display;
+}
+
+.introduction_body{
+	margin-top: 3%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+}
+
+.introbody_image {
+	width: 100%;
+}
+
+.introbody_image> img{
+	width: 100%;
+}
+
+/* 텍스트 위치 */
+.introbody_title {
+	margin-top: 5%;
+	width: 200px;
+    float: left;
+    font-size: 18px;
+    
+}
+
+.introbody_body {
+	width: 825px;
+    margin-left: auto;
+    font-size: 16px;
+    margin-top: 5%;
+}
+
+.introbody_body> p {
+	font-size: 16px;
+}
+
+.introbody_body2 {
+	width: 825px;
+    margin-left: auto;
+    font-size: 16px;
+    margin-top: 5%;
+}
+
+
+</style>
+
 </head>
 <body>
-
-<jsp:include page="../include/header.jsp" flush="false"/>
+	<%@ include file="../include/header.jsp"%>
 	<div class="introduction_box">
 		<div class="introduction_title">
 			<strong>“Design Your Seoul” 나만의 서울여행 코스짜기, 더 좋은 계획</strong>
@@ -48,11 +91,11 @@
 			</div>
 			
 			<div class="introbody_body">
-				<p>
-					DYS는 서울에 있는 여러 테마를 보고 계획할 수 있는 시스템을 통해 더 편리하고 즐거운 세상을 꿈꿉니다.<br>
-					여행과 계획, 테마와 계획 기술을 한 층 더 편리하게 구현함으로써 여행을 좀 더 재미있고 좋은 추억으로 남기실 수 있게
-					노력하겠습니다.
-				</p>
+				<p>DYS는 서울에 있는 여러 테마를 보고 계획할 수있는
+							 시스템을 통해 더 편리하고 즐거운 세상을 꿈꿉니다.<br />
+							여행과 계획, 테마와 계획 기술을 한 층 더 가깝게 
+							구현함으로써 여향계획을 더 나은 계획으로 
+							만들기 위해 노력하고 있습니다.</p>
 			
 			</div>
 			
@@ -60,11 +103,14 @@
 				<h4>DYS 소개</h4>
 			</div>
 			
-			<div class="introbody_body">
-				<p>너무나 빠르고 바쁘게 흘러가는 21세기, 작지만 많은 볼거리, 즐길거리가 있는 우리나리의 수도 서울,<br>
-					이제는 직접 고르고 계획하여 다채롭게 즐기실 수 있게 하기 위해 만들었습니다.<br>
-					5가지 테마에 서울의 많은 장소를 골라 계획하고 다른 멋진 서울 여행 코스도 보고 즐겨보세요.
-				</p>
+			<div class="introbody_body2">
+				<p>너무나 빠르고 바쁘게 흘러가는 21세기,
+							멀리나갈 수 없는 사회구조에작지만 많은 테마를 
+							가지고 있는  우리나라의 수도 서울여행, 
+							이제는 나만의 것으로 디자인 하기위해 만들었습니다.
+							5가지 테마에 서울의 많은 장소를 디자인하고 다른 코스들과 
+							비교해 더 나은 코스를 쉽고 빠르게 확인하기 위해 노력하겠습니다.</p>
+							<br /><br /><br /><br />
 			
 			</div>
 		</div>

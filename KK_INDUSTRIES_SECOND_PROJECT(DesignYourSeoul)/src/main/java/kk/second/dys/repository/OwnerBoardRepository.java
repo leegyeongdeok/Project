@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OwnerBoardRepository extends JpaRepository<OwnerBoard, Long> {
 
-    OwnerBoard findByBoardNo(Long ownerBoardNo);
+    OwnerBoard findByOwnerBoardNo(Long ownerBoardNo);
     Page<OwnerBoard> findAllByTitleContainsOrContentContains(String title, String content, Pageable pageable);
     Page<OwnerBoard> findAllByOwnerUserAccount(String account, Pageable pageable);
     Page<OwnerBoard> findAllByContentContains(String content, Pageable pageable);

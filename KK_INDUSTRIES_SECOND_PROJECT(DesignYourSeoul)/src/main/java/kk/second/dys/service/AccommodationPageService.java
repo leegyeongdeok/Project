@@ -1,17 +1,14 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.Accommodation;
-import kk.second.dys.model.network.response.AccommodationApiResponse;
+import kk.second.dys.model.entity.Cafe;
 import kk.second.dys.repository.AccommodationRepository;
+import kk.second.dys.repository.CafeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class AccommodationPageService {
@@ -33,36 +30,8 @@ public class AccommodationPageService {
         return repository.findAllByAddressContains(location, pageable);
     }
 
-    public List<AccommodationApiResponse> ListReadForRank(Sort sort) {
-        List<Accommodation>  accommodationList=  repository.findTop10By(sort);
-        List<AccommodationApiResponse> result = new ArrayList<>();
-
-        for (Accommodation a:accommodationList){
-            result.add(response(a));
-        }
-        return result;
-    }
 
     public Accommodation findById(Long number) {
         return repository.getOne(number);
-    }
-
-    private AccommodationApiResponse response (Accommodation accommodation){
-        if(accommodation == null){
-            System.out.println("null");
-            return null;
-        }else{
-            AccommodationApiResponse accommodationApiResponse = AccommodationApiResponse.builder()
-                    .accommodationId(accommodation.getAccommodationId())
-                    .name(accommodation.getName())
-                    .callNumber(accommodation.getCallNumber())
-                    .address(accommodation.getAddress())
-                    .link(accommodation.getLink())
-                    .grade(accommodation.getGrade())
-                    .recommend(accommodation.getRecommend())
-                    .areaId(accommodation.getArea().getAreaId())
-                    .build();
-            return accommodationApiResponse;
-        }
     }
 }

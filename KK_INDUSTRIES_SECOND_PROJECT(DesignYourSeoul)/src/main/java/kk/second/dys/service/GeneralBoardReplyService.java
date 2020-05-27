@@ -1,8 +1,11 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.GeneralBoardReply;
-import kk.second.dys.model.network.request.GeneralBoardReplyRequest;
-import kk.second.dys.model.network.response.GeneralBoardReplyResponse;
+import kk.second.dys.model.entity.OwnerBoardReply;
+import kk.second.dys.model.netowrk.request.GeneralBoardReplyRequest;
+import kk.second.dys.model.netowrk.request.OwnerBoardReplyRequest;
+import kk.second.dys.model.netowrk.response.GeneralBoardReplyResponse;
+import kk.second.dys.model.netowrk.response.OwnerBoardReplyResponse;
 import kk.second.dys.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -48,7 +51,7 @@ public class GeneralBoardReplyService {
                 .reply(reply.getReply())
                 .registeredAt(reply.getRegisteredAt())
                 .updatedAt(reply.getUpdatedAt())
-                .generalBoardNo(reply.getGeneralBoard().getBoardNo())
+                .generalBoardNo(reply.getGeneralBoard().getGeneralBoardNo())
                 .generalId(reply.getGeneralUser().getGeneralId())
                 .build();
         return generalBoardReplyResponse;

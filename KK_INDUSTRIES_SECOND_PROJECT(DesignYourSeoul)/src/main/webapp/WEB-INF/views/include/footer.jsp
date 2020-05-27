@@ -1,82 +1,96 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+		 pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="ko">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta content="yes" name="apple-mobile-web-app-capable"/>
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
-    <style type="text/css">
-        @-ms-viewport {
-            width: device-width
-        }
 
-        @-o-viewport {
-            width: device-width
-        }
+	<link
+			href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,300,400,500,600,700,800,900&display=swap&subset=latin-ext,vietnamese"
+			rel="stylesheet">
 
-        @viewport {
-            width: device-width
-        }
-    </style>
+	<style>
+		.footer_back {
+			background-color: #fff2f2;
+			width: 100%;
+			height: 68px;
+			margin-top: 3%;
+		}
 
-    <link rel="stylesheet" href="/resources/css/include/footer.css">
-    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,300,400,500,600,700,800,900&display=swap&subset=latin-ext,vietnamese"
-          rel="stylesheet">
+
+		.footer_box {
+			margin: 0 auto;
+			width: 700px;
+			height: 65px;
+		}
+
+		.top {
+			margin-bottom: 0%;
+			padding-top: 1%;
+			height: 30px;
+			width: 450px;
+		}
+
+		.top>a {
+			margin-right: 3%;
+		}
+
+		.body a {
+			margin-right: 1%;
+			margin-top: 2%;
+		}
+
+		.body {
+			margin-bottom: 0%;
+			height: 22px;
+			width: 450px;
+			float: left;
+		}
+
+		.foot a {
+			margin-right: 1%;
+		}
+
+		.foot {
+			height: 22px;
+		}
+
+		.title_name {
+			font-family: Big Shoulders Display;
+		}
+
+		.body a, .foot a {
+			font-size: 10pt;
+			color: #b3a3a3;
+		}
+
+		.footer_image {
+			position: relative;
+			margin-top: -36px;
+			margin-left: 130px;
+			width: 85px;
+			height: 65px;
+		}
+	</style>
+
+
 </head>
 <body>
-<script type="text/javascript" src="/resources/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/resources/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/resources/js/footer.js"></script>
 <div class="footer_back">
-    <div class="footer_box">
-        <div class="footer_content_top">
-            <a class="title_name" href="/dys">Design Your Seoul(DYS)</a>
-        </div>
+	<div class="footer_box">
+		<div class="footer top">
+			<a class="title_name" href="#"
+			   style="color: orange; font-size: 16pt;">Design Your Seoul</a>&nbsp;<a
+				href="#" style="font-size: 12pt; color:#b3a3a3;">공지사항</a>
+		</div>
+		<div class="footer body">
+			<a href="#">회사소개</a><a>·</a> <a href="#">문의사항</a><a>·</a><a href="#">게시판</a><a>·</a>
+			<a href="#">이용약관</a><a>·</a><a href="#">마이페이지</a><a>·</a> <a
+				href="#">고객센터</a>
+		</div>
+		<img class="footer_image" src="/resources/image/logo/footlogo.png">
 
-        <div class="footer_content_body">
-            <a href="/dys/login">로그인</a>
-            <a href="/dys/company/intro">회사소개</a>
-            <a href="notice">공지사항</a>
-            <a href="/dys/question"> 문의사항</a>
-            <a href="/dys/board"> 게시판</a>
-        </div>
-
-    </div>
-    <div class="footer_corp_box">
-        <p>© 2019 KK INDUSTRIES Corp. All rights reserved.</p>
-        <img class="footer_image" src="/resources/image/logo/footlogo.png">
-    </div>
-
-    <div class="sensor" onclick="moreInfo()">
-        <P class="moreInfo">MORE INFO</P>
-
-        <div class="company_info">
-            <h3>KK INDUSTRIES information</h3>
-            <p class="info_cont">상호명 : (주) 케이케이 인더스트리스</p>
-            <p class="info_cont">대표명 : 황규상, 이경덕</p>
-            <p class="info_cont">주소 : 경기도 화성시 석우동 55</p>
-            <p class="info_cont">사업자 등록번호 : xxx-xx-xxxx</p>
-        </div>
-
-        <div class="company_intro">
-            <h3>We want to make your life easier</h3>
-            <p>more fun, more experience</p>
-            <p>In your life</p>
-        </div>
-
-        <div class="company_from">
-            <p>From KK INDUSTRIES</p>
-            <img class="company_image" src="/resources/image/KKLogo.png">
-        </div>
-
-
-       <%-- --%>
-    </div>
+	</div>
 </div>
 </body>
 </html>

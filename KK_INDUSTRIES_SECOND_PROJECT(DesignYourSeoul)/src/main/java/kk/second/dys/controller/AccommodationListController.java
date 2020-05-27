@@ -2,10 +2,8 @@ package kk.second.dys.controller;
 
 import kk.second.dys.model.entity.Accommodation;
 import kk.second.dys.service.AccommodationPageService;
-import kk.second.dys.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,33 +18,32 @@ public class AccommodationListController {
     @Autowired
    private AccommodationPageService service;
 
-    @Autowired
-    private ReviewService reviewService;
-
-    @GetMapping({"/theme/accomList"})
-    public String foodList(@RequestParam(required = false) String type, @PageableDefault Pageable pageable,
-                           @RequestParam(required = false, defaultValue = "") String location, ModelMap modelMap) {
+    @GetMapping({"/hotelList"})
+    public String cafeList(@RequestParam(required = false) String type, @PageableDefault Pageable pageable,
+                           @RequestParam(required = false, defaultValue = "") String  location,ModelMap modelMap,
+                           @RequestParam(required = false) String id) {
         modelMap.addAttribute("type", type);
         modelMap.addAttribute("location", location);
-        Sort sort = new Sort(Sort.Direction.DESC, "recommend");
-        modelMap.addAttribute("accomRank", service.ListReadForRank(sort));
-
-        if (location.equals("")) {
-            modelMap.addAttribute("accomList", service.findAll(pageable));
-        } else {
-            modelMap.addAttribute("accomList", service.findFood(pageable, location));
+        if(location.equals("")){
+            modelMap.addAttribute("hotelList", service.findAll(pageable));
+        }else{
+            modelMap.addAttribute("hotelList", service.findFood(pageable, location));
         }
-        return "themeList/accommodationList";
+
+        if(id == null){
+            return "themelist/hotelList";
+        }else{
+            return "themelistlogin/hotelListLogin";
+        }
+
     }
 
-    @GetMapping("/theme/accomList/detail")
-    public String foodDetail(@RequestParam(required = false) String no, ModelMap modelMap) {
+    @GetMapping("/hotelDetail")
+    public String foodDetail(@RequestParam(required = false) String  no, ModelMap modelMap) {
         Long number = Long.parseLong(no);
         Accommodation accommodation = service.findById(number);
-        modelMap.addAttribute("accommodation", accommodation);
-        modelMap.addAttribute("reviewList", reviewService.findAccommodationReview(number) );
-
-        return "themeList/detail/accommodationDetail";
+        modelMap.addAttribute("hotel", accommodation);;
+        return "detail/hotelDetail";
     }
 
 }

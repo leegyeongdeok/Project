@@ -1,0 +1,130 @@
+@charset "EUC-KR";
+
+.ui[class*="center aligned"].grid {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.ui.grid {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.ui.grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding: 0;
+}
+
+body>.grid {
+    height: 100%;
+}
+
+.ui.grid>.row>[class*="middle aligned"].column, .ui.grid>[class*="middle aligned"].column:not(.row), .ui.grid>[class*="middle aligned"].row>.column, .ui[class*="middle aligned"].grid>.column:not(.row), .ui[class*="middle aligned"].grid>.row>.column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    vertical-align: middle;
+    -ms-flex-item-align: center!important;
+    align-self: center!important;
+}
+
+.ui.grid>.row>[class*="center aligned"].column.column, .ui.grid>[class*="center aligned"].column.column, .ui.grid>[class*="center aligned"].row>.column, .ui[class*="center aligned"].grid>.column, .ui[class*="center aligned"].grid>.row>.column {
+    text-align: center;
+    -ms-flex-item-align: inherit;
+    align-self: inherit;
+}
+
+.ui.grid>.column:only-child, .ui.grid>.row>.column:only-child {
+    width: 100%;
+}
+
+.ui.grid>.column:not(.row) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ui.grid>.column:not(.row), .ui.grid>.row>.column {
+    position: relative;
+    display: inline-block;
+    width: 6.25%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: top;
+}
+
+.ui.teal.header {
+    color: #00b5ad!important;
+}
+
+.ui.header:first-child {
+    margin-top: -.14285714em;
+}
+
+h2.ui.header {
+    font-size: 1.71428571rem;
+}
+
+.ui.header {
+    border: none;
+    margin: calc(2rem - .14285714em) 0 1rem;
+    padding: 0 0;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    line-height: 1.28571429em;
+    text-transform: none;
+    color: rgba(0,0,0,.87);
+}
+
+.ui.large.form {
+    font-size: 1.14285714rem;
+}
+
+.ui.form {
+    position: relative;
+    max-width: 100%;
+}
+
+.ui.stacked.segment {
+    padding-bottom: 1.4em;
+}
+
+.ui.segment:first-child {
+    margin-top: 0;
+}
+
+.ui.segment, .ui.segments .segment {
+    font-size: 1rem;
+}
+
+.ui.segment {
+    position: relative;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    margin: 1rem 0;
+    padding: 1em 1em;
+    border-radius: .28571429rem;
+    border: 1px solid rgba(34,36,38,.15);
+}
+
+
+
+
+
+
+

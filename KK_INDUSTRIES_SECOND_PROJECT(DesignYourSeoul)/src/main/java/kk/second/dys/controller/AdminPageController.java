@@ -1,8 +1,9 @@
 package kk.second.dys.controller;
 
 import kk.second.dys.model.entity.*;
-import kk.second.dys.model.network.response.GeneralUserApiResponse;
-import kk.second.dys.model.network.response.OwnerUserApiResponse;
+import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
+import kk.second.dys.model.netowrk.response.OwnerUserApiResponse;
+import kk.second.dys.repository.CafeRepository;
 import kk.second.dys.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -45,7 +46,10 @@ public class AdminPageController {
     private NoticePageService noticePageService;
 
     @Autowired
-    private QuestionService questionService;
+    private GeneralQuestionPageService generalQuestionPageService;
+
+    @Autowired
+    private OwnerQuestionPageService ownerQuestionPageService;
 
 
     @GetMapping("Home")
@@ -93,8 +97,8 @@ public class AdminPageController {
     @GetMapping("adminQuestionDetail")
     public String adminQuestinDetail(@RequestParam String no, @RequestParam String type ,ModelMap modelMap) {
         Long number = Long.parseLong(no);
-        GeneralQuestion generalQuestion = questionService.findByGeneralQuestionNo(number);
-        OwnerQuestion ownerQuestion = questionService.findByOwnerQuestionNo(number);
+        GeneralQuestion generalQuestion = generalQuestionPageService.findByGeneralQuestionNo(number);
+        OwnerQuestion ownerQuestion = ownerQuestionPageService.findByOwnerQuestionNo(number);
         if(type.equals("owner")){
             modelMap.addAttribute("ownerQuest", ownerQuestion);
             return "adminpage/adminOwnerQuestionDetail";

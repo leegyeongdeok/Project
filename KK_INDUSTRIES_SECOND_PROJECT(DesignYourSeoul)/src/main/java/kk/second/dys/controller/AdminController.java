@@ -1,6 +1,6 @@
 package kk.second.dys.controller;
 
-import kk.second.dys.model.network.response.AdminResponse;
+import kk.second.dys.model.netowrk.response.AdminResponse;
 import kk.second.dys.service.AdminApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

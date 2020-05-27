@@ -21,7 +21,7 @@ public class OwnerQuestion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long questionNo;
+    private Long ownerQuestionNo;
 
 
     private String title;
