@@ -61,7 +61,7 @@
 
         <tr>
         <td class="notice_title">
-        <a class="notice_tag" href="/notice/noticeDetail">
+        <a class="notice_tag" href="/notice/detail">
             LE TROIS 공지사항
         </a>
         </td>

@@ -3,8 +3,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
+	<link rel=" shortcut icon" href="/image/favicon_black.ico" style="user-select: auto;">
+	<link rel="icon" href="/resources/image/favicon_black.ico">
+	<style type="text/css">
+		@-ms-viewport {
+			width: device-width
+		}
+
+		@-o-viewport {
+			width: device-width
+		}
+
+		@viewport {
+			width: device-width
+		}
+	</style>
+
+	<title>Design Your Seoul</title>
+	<link rel="stylesheet" href="/resources/css/login.css">
+
 </head>
 
 <style type="text/css">
@@ -203,7 +226,7 @@
 		</div>
 	</div>
 </div>
-<%@ include file="../include/footer.jsp"%>
+
 <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/resources/js/jquery.serializeObject.js"> </script>
 <script type="text/javascript">

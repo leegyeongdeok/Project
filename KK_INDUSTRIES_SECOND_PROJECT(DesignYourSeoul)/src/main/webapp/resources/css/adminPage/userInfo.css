@@ -1,0 +1,87 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.userInfo_box {
+    width: 80vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.head_title {
+    margin: 45px 0 30px 0;
+    font-size: 35px;
+    color: #000;
+    line-height: 0px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.basic_info {
+    border: 2px solid #e6e6e6;
+    border-radius: 25px;
+}
+
+.info_title {
+    padding: 25px 20px;
+}
+
+.content {
+    overflow: hidden;
+    width: 100%;
+    padding: 25px;
+    font-size: 15px;
+    line-height: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.content_tit {
+    float: left;
+    width: 20%;
+    padding: 0 5%;
+    letter-spacing: -1px;
+}
+
+.content_val {
+    float: left;
+    width: 70%;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+#second_info{
+    padding-top: 10%;
+}
+
+.btn_area {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.cancel, .delete {
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 0;
+    background-color: orange;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+
+}
+

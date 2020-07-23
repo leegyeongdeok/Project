@@ -1,0 +1,89 @@
+
+div {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.sidemenu_link {
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.mysidemenu .myinfo .on .link_myinfo {
+    color: #ef4323;
+}
+
+.myinfo_image {
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding-right: 6%;
+    padding-left: 10%;
+    margin-top: 1%;
+}
+
+#myside {
+    float: left;
+    width: 250px;
+    border: 0 none;
+    background: 0;
+    margin-top: 5%;
+    margin-left: 0%;
+    position: fixed;
+}
+
+.mysidemenu {
+    overflow: hidden;
+    width: 250px;
+    padding-top: 6%;
+    text-align: left;
+}
+
+.mysidemenu .info_tit {
+    display: block;
+    height: 41px;
+    font-size: 17px;
+    color: #000;
+    line-height: 28px;
+    padding-bottom: 0px;
+    padding-left: 17%;
+    padding-top: 10px;
+    margin-top: -14%;
+    margin-bottom: 5%;
+    width: 150px;
+}
+
+.mysidemenu .myinfo {
+    padding: 6px 0 37px;
+}
+
+.mysidemenu .myinfo li {
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+/* 링크 색 */
+.myinfo .link_myinfo {
+    float: left;
+    color: #252525;
+    text-decoration: none;
+}
+
+.mysidemenu .myinfo .on .link_myinfo {
+    color: #ef4323;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.info_tit:hover {
+    border-radius: 0 50px 50px 0;
+    background-color: #eee;
+}
+
+#myside{
+    z-index: 1;
+}

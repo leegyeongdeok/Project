@@ -1,0 +1,279 @@
+@import url('/resources/css/bootstrap-4.4.1.min.css');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+div {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* 첫번쨰 div */
+
+#myPage {
+    width: 1260px;
+    letter-spacing: -1px;
+    height: 2235px;
+    margin: 0 0 0 250px;
+}
+
+/* 타이틀 */
+.mypage_tit {
+    overflow: hidden;
+    width: 1000px;
+    height: 60px;
+    padding-top: 50px;
+    border-bottom: 2px solid #000;
+    text-align: left;
+}
+
+.mypage_tit {
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    padding-top: 50px;
+    border-bottom: 2px solid #000;
+    text-align: left;
+}
+
+
+/* 마이페이지 body */
+#myPage_main {
+    padding-top: 100px;
+    letter-spacing: 0;
+}
+
+/* 마우스 올릴때 */
+.info_tit:hover {
+    border-radius: 0 50px 50px 0;
+    background-color: #eee;
+}
+
+
+/* 링크 색 */
+.myinfo .link_myinfo {
+    float: left;
+    color: #252525;
+    text-decoration: none;
+}
+
+.mysidemenu .myinfo .on .link_myinfo {
+    color: #ef4323;
+}
+
+/* 정보 보여주기 시작 */
+
+.info_title {
+    overflow: hidden;
+    width: 795px;
+    padding-top: 27px;
+    padding-bottom: 0px;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mypagebox #mybody {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.mypagebox .mybody_cont {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+
+    margin: 0 auto;
+}
+
+.cont_personal {
+    overflow: hidden;
+    text-align: left;
+}
+
+.tit_personal {
+    height: 22px;
+    margin-left: 33px;
+    padding: 20px 0;
+    font-size: 40px;
+    color: #000;
+    line-height: 0px;
+    text-align: center;
+}
+
+.cont_personal #title_p {
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+.tit_personal .changeinfo {
+    margin-left: 75%;
+}
+
+.cont_personal .basic_info {
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.cont_personal .basic_info .tit_basic {
+    float: left;
+    width: 134px;
+    padding: 0 37px;
+    letter-spacing: -1px;
+}
+
+.cont_personal .basic_info .box_basic {
+    float: left;
+    width: 450px;
+    padding-left: 40px;
+}
+
+/* 마우스 올려놓을때 */
+
+/* 글씨 사이즈 */
+.tit_basic {
+    font-size: 12px;
+    color: #00000073;
+}
+
+.box_basic {
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.pro_title {
+    font-size: 30px;
+    font-weight: 600;
+    color: orange;
+    font-family: Big Shoulders Display;
+}
+
+.title_font {
+    font-size: 17px;
+    color: #000000a3;
+}
+
+/* 사이드 이미지 */
+
+.myinfo_image {
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding-right: 6%;
+    padding-left: 10%;
+    margin-top: 1%;
+}
+
+.sidemenu_link {
+    padding-left: 1%;
+}
+
+/* 좋아요 리스트 이미지 */
+
+
+
+#image_ul {
+    overflow: hidden;
+    margin: 0;
+}
+
+
+a > img:HOVER {
+    opacity: 0.2;
+}
+
+a > img:HOVER .image_text {
+    opacity: 1;
+}
+
+.image_li {
+    width: 200px;
+    margin-bottom: 5%;
+    margin-right: 1%;
+    float: left;
+    background-color: black;
+    height: 200px;
+}
+
+.image_none_li {
+    width: 200px;
+    margin-bottom: 5%;
+    margin-right: 1%;
+    height: 261.5px;
+    list-style: none;
+}
+
+.list_image {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.good_type {
+    width: 23px;
+    height: 23px;
+    padding-left: 45%;
+    padding-top: 7%;
+}
+
+/* 이전,다음 버튼 위치 */
+
+.image_back {
+    position: relative;
+    top: 120px;
+    left: 2px;
+}
+
+.image_next {
+    position: relative;
+    top: 122px;
+    left: 1130px;
+}
+
+.back{
+    float: left;
+}
+.next{
+    float: right;
+}
+.next, .back{
+    margin: 8vh 1vw 0 0;
+    cursor: pointer;
+    z-index: 1;
+    color: rgb(115, 115, 115);
+    overflow: visible;
+}
+
+/* 이미지 텍스트 */
+a > span {
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    z-index: 10;
+}
+
+span > p {
+    position: relative;
+    top: -167px;
+    text-align: center;
+    height: 100px;
+    color: orange;
+    font-size: 10pt;
+    font-weight: 100;
+}
+
+span > img:HOVER {
+    opacity: 0.2;
+}
+
+.li_span{
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    z-index: 10;
+}

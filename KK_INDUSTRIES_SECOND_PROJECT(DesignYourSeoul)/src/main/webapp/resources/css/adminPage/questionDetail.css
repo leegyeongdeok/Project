@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.business_inquiry_detail_bok {
+    padding-top: 70px;
+    margin: 0 auto;
+    width: 100vw;
+    height: auto;
+    max-width: 1200px;
+    min-width: 700px;
+    text-align: center;
+
+}
+
+.business_inquiry_tit {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.content{
+    margin: 50px auto;
+    width: 70vw;
+    max-width: 1200px;
+    min-width: 700px;
+}
+
+.business_inquiry_brd_title {
+    position: relative;
+    vertical-align: middle;
+    padding: 15px;
+    font-size: 25px;
+    border-top: 2px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.business_inquiry_detail_tbl_cell {
+    display: table-cell;
+    line-height: 1.4;
+    width: 100%;
+}
+
+.business_inquiry_brd_date {
+   display: table-cell;
+    font-size: 15px;
+}
+
+.business_inquiry_brd_name {
+    margin: 25px 0 0 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.business_inquiry_editor_area {
+    font-size: 1em;
+    min-height: 300px;
+    padding: 20px;
+    line-height: 25px;
+    border-bottom: 1px solid #222;
+}
+
+.business_inquiry_ReviewList {
+    width: 100%;
+    margin-top: 19px;
+}
+
+
+.questionAnswer {
+    padding: 30px 0 0 5px;
+    min-height: 300px;
+    border: black solid 1px;
+}
+
+#questionWriting{
+    padding: 30px 0 0 5px;
+    margin: 0 auto;
+    min-height: 300px;
+    border: black solid 1px;
+    width: 90%;
+}
+
+
+.reply_userName{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.reply_date{
+    font-weight: 100;
+}
+
+.btn_area {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.btn_area input{
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+}
+
+

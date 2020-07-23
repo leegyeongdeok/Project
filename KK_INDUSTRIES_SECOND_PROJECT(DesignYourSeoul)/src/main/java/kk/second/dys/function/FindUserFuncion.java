@@ -1,9 +1,9 @@
 package kk.second.dys.function;
 
-import kk.second.dys.model.entity.GeneralUser;
-import kk.second.dys.model.entity.OwnerUser;
-import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
-import kk.second.dys.model.netowrk.response.OwnerUserApiResponse;
+import kk.second.dys.model.entity.user.GeneralUser;
+import kk.second.dys.model.entity.user.OwnerUser;
+import kk.second.dys.model.network.response.GeneralUserApiResponse;
+import kk.second.dys.model.network.response.OwnerUserApiResponse;
 import kk.second.dys.repository.GeneralUserRepository;
 import kk.second.dys.repository.OwnerUserRepository;
 import kk.second.dys.service.GeneralUserApiService;

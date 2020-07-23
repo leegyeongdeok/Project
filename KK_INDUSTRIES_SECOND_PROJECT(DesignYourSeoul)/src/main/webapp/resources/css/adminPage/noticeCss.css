@@ -1,0 +1,90 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    overflow-x: hidden;
+}
+.post_detail_top{
+    width: 100vw;
+    margin:  100px auto;
+    text-align: center;
+}
+.post_tit {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.post_desc{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+
+.post_brd_title {
+    position: relative;
+    height: 80px;
+    padding-left: 15px;
+    font-size: 25px;
+    border-top: 2px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.content{
+    margin: 0 auto;
+    width: 70vw;
+    min-height: 400px;
+}
+
+.post_detail_tbl_cell {
+    width: 70vw;
+    height: 80px;
+    display: table-cell;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+.post_brd_date {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    font-size: 15px;
+}
+
+#content_textArea{
+    width: 69vw;
+    height: 60vh;
+    max-height: 400px;
+}
+.btn_area {
+    margin-top:5px;
+    margin-bottom:20px;
+    text-align: right;
+}
+.cancel, .registration {
+
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 0;
+    background-color: orange;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+
+}
+
+.cancel{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.post_writing_title{
+    font-size:25px;
+    width: 90%;
+    height: 28px;
+    border: 0;
+    font-weight: bolder;
+}

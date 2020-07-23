@@ -1,0 +1,129 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.list_home_back {
+    width: 100vw;
+    height: 100vh;
+}
+
+.theme_container {
+    width: calc(100vw - 250px);
+    max-width: 1500px;
+    height: 100%;
+    margin-left: 250px;
+    letter-spacing: -1px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main_title {
+    padding-top: 40px;
+    margin: 0;
+    font-size: 35px;
+}
+
+.title_content {
+    padding-top: 10px;
+    font-weight: lighter;
+    font-size: 25px;
+    margin: 0;
+}
+
+.box_container {
+    width: 70%;
+    margin: 50px auto 0 auto;
+    max-width: 1500px;
+    min-width: 900px;
+    min-height: 600px;
+    overflow: hidden;
+    border: solid 2px darkgray
+}
+
+.top_box, .bottom_box {
+    display: flex;
+    width: 90%;
+    height: 40%;
+    margin: 10% auto 5% auto;
+}
+
+.theme_box {
+    width: 30%;
+    height: 90%;
+    min-height: 210px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.theme_box:hover {
+    background-color: orange;
+}
+
+.theme_box:hover .theme_icon {
+    color: white;
+}
+
+.theme_icon {
+    margin: 15% 0 0 0;
+    color: orange;
+}
+
+.theme_name {
+    margin-top: 10%;
+    font-size: 33px;
+}
+
+.likeList {
+    width: 90%;
+    height: 85%;
+    margin: 2% auto 1% auto;
+    border: black solid 1px;
+    overflow: hidden;
+
+}
+
+.theme_likeList {
+    margin-bottom: 3%;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    min-height: 645px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    overflow-y: scroll;
+}
+
+.likeList_box {
+    width: 90%;
+    min-height: 210px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.theme_img {
+    width: 90%;
+    margin: 10px;
+    height: 190px;
+}
+
+.btn_container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    margin: 0;
+    text-align: center;
+    height: 10%;
+}
+
+.btn_container h2 {
+    margin: 0;
+    padding: 1.5% 0;
+    font-size: 40px;
+}
+

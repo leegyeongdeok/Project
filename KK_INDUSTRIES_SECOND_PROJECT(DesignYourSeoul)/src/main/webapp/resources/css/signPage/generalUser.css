@@ -1,0 +1,157 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#wrap{
+    width: 100vw;
+}
+
+#header {
+    position: relative;
+    overflow: hidden;
+    padding: 62px 0 59px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+#container, #footer, #header {
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 460px
+}
+
+.h_logo{
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background: url(/resources/image/logo.png) no-repeat 0 0;
+    -webkit-background-size: 250px auto;
+    background-size: 250px auto;
+    color: transparent;
+}
+
+.h_logo:before {
+    content: '\00a0';
+    font-size: 0
+}
+
+.row_group {
+    overflow: hidden;
+    width: 100%
+}
+
+.join_row {
+    margin-top: 5%;
+}
+
+.join_title {
+    margin: 10px 0 8px;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.ps_box{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    line-height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#idMsg {
+    margin-top: 5%;
+    margin-left: -4%;
+}
+
+.error_next_box {
+    display: block;
+    margin: 5px 0 -2px;
+    font-size: 12px;
+    line-height: 14px;
+    color: red;
+    margin-top: 2%;
+}
+
+.row_group+.row_group {
+    margin-top: 0px;
+}
+
+.row_group {
+    overflow: hidden;
+    width: 100%;
+}
+
+.box_right_space {
+    padding-right: 14px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.join_birthday{
+    padding: 0;
+}
+
+.bir_wrap, .name_wrap {
+    display: table;
+    width: 100%;
+}
+
+.join_row {
+    margin-top: 5%;
+}
+
+.join_mobile {
+    position: relative;
+    overflow: hidden;
+}
+
+.join_mobile .int_mobile_area {
+    position: relative;
+    margin-top: 10px;
+    padding: 0 0 0 0;
+}
+
+.btn_area {
+    margin: 30px 0 9px;
+}
+
+.btn_member {
+    color: #fff;
+    background-color: orange;
+}
+
+.btn_type {
+    display: block;
+    width: 100%;
+    padding: 21px 0 17px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

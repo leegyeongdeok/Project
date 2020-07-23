@@ -1,11 +1,21 @@
 package kk.second.dys.service;
 
-import kk.second.dys.model.entity.GeneralUser;
-import kk.second.dys.model.netowrk.request.GeneralUserApiRequest;
-import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
+import kk.second.dys.model.entity.user.GeneralUser;
+import kk.second.dys.model.entity.board.GeneralBoard;
+import kk.second.dys.model.entity.question.GeneralQuestion;
+import kk.second.dys.model.enumclass.UserStatus;
+import kk.second.dys.model.network.request.GeneralUserApiRequest;
+import kk.second.dys.model.network.response.GeneralUserApiResponse;
 import kk.second.dys.repository.GeneralUserRepository;
+import kk.second.dys.repository.LikeListRepository;
+import kk.second.dys.repository.board.GeneralBoardReplyRepository;
+import kk.second.dys.repository.board.GeneralBoardRepository;
+import kk.second.dys.repository.question.GeneralQuestionReplyRepository;
+import kk.second.dys.repository.question.GeneralQuestionRepository;
+import kk.second.dys.repository.review.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +26,36 @@ public class GeneralUserApiService  {
 
     @Autowired
     private GeneralUserRepository repository;
+
+    @Autowired
+    private LikeListRepository likeListRepository;
+
+    @Autowired
+    private GeneralQuestionRepository questionRepository;
+
+    @Autowired
+    private GeneralQuestionReplyRepository questionReplyRepository;
+
+    @Autowired
+    private GeneralBoardRepository boardRepository;
+
+    @Autowired
+    private GeneralBoardReplyRepository boardReplyRepository;
+
+    @Autowired
+    private FamousRestaurantReviewRepository restaurantReviewRepository;
+
+    @Autowired
+    private CafeReviewRepository cafeReviewRepository;
+
+    @Autowired
+    private AttractionReviewRepository attractionReviewRepository;
+
+    @Autowired
+    private AccommodationReviewRepository accommodationReviewRepository;
+
+    @Autowired
+    private ActivityReviewRepository activityReviewRepository;
 
 
     public GeneralUserApiResponse create(GeneralUserApiRequest request) {
@@ -29,6 +69,8 @@ public class GeneralUserApiService  {
                 .phoneNum(request.getPhoneNum())
                 .status(request.getStatus())
                 .build();
+
+        System.out.println(user.getRegisteredAt());
         repository.save(user);
 
         return response(user);
@@ -94,8 +136,46 @@ public class GeneralUserApiService  {
         return response(user);
     }
 
+    public  GeneralUserApiResponse updateStatus(String account){
+        GeneralUser user =  repository.findByAccount(account);
+        int val = user.getStatus().getId();
+        if(val == 0){
+            user.setStatus(UserStatus.UNREGISTERED);
+            repository.save(user);
+        }else{
+            user.setStatus(UserStatus.REGISTERED);
+            repository.save(user);
+        }
+        return response(user);
+    }
+
+    @Transactional
     public GeneralUserApiResponse delete(String account) {
         GeneralUser user =  repository.findByAccount(account);
+
+        List<GeneralQuestion> list = questionRepository.findAllByGeneralUser(user);
+        List<GeneralBoard> boardList = boardRepository.findAllByGeneralUser(user);
+
+        for(GeneralQuestion question : list){
+            questionReplyRepository.findByGeneralQuestion(question).ifPresent(reply -> questionReplyRepository.delete(reply));
+            questionRepository.delete(question);
+        }
+
+        for(GeneralBoard board : boardList){
+            boardReplyRepository.deleteAllByGeneralBoard(board);
+            boardRepository.delete(board);
+        }
+
+
+
+        boardReplyRepository.deleteAllByGeneralUser(user);
+
+        likeListRepository.deleteAllByGeneralUser(user);
+        restaurantReviewRepository.deleteAllByGeneralUser(user);
+        cafeReviewRepository.deleteAllByGeneralUser(user);
+        attractionReviewRepository.deleteAllByGeneralUser(user);
+        activityReviewRepository.deleteAllByGeneralUser(user);
+        accommodationReviewRepository.deleteAllByGeneralUser(user);
         repository.delete(user);
         return response(user);
     }

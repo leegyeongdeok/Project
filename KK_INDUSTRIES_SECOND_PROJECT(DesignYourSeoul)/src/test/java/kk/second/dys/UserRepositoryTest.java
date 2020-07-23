@@ -1,10 +1,8 @@
 package kk.second.dys;
 
 import kk.second.dys.function.UserFormFunction;
-import kk.second.dys.model.entity.GeneralUser;
-import kk.second.dys.model.netowrk.Header;
+import kk.second.dys.model.entity.user.GeneralUser;
 import kk.second.dys.repository.GeneralUserRepository;
-import net.minidev.json.JSONUtil;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -50,10 +50,8 @@ function resizer(width, height) {
 
     if (width + 150 < height) {
         $('.clothes_wd').attr('class', 'clothes');
-        $('.menu').css('font-size', '2vh');
     } else {
         $('.clothes').attr('class', 'clothes_wd');
-        $('.menu').css('font-size', '2vw');
     }
 }
 

@@ -1,7 +1,7 @@
 package kk.second.dys.function;
 
-import kk.second.dys.model.entity.GeneralUser;
-import kk.second.dys.model.entity.OwnerUser;
+import kk.second.dys.model.entity.user.GeneralUser;
+import kk.second.dys.model.entity.user.OwnerUser;
 import kk.second.dys.repository.GeneralUserRepository;
 import kk.second.dys.repository.OwnerUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,5 +54,15 @@ public class UserFormFunction {
 
         System.out.println(result.get());
         return result.get();
+    }
+
+    @GetMapping("/get/general/{account}")
+    public Long getGeneralUserId(@PathVariable String account){
+        return grepository.findByAccount(account).getGeneralId();
+    }
+
+    @GetMapping("/get/owner/{account}")
+    public Long getOwnerUserId(@PathVariable String account){
+        return orepository.findByAccount(account).getOwnerId();
     }
 }

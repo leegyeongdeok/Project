@@ -1,0 +1,110 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.info_change {
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+.title_box {
+    width: 100vw;
+    margin-top: 50px;
+}
+
+.change_title {
+    text-align: center;
+}
+
+/* 라인 */
+
+.line {
+    border-top: 1px solid #dcdcdc;
+    height: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.change_info {
+    margin: auto;
+    width: 50vw;
+    min-width: 520px;
+    text-align: center;
+}
+
+.change_explan {
+    padding: 30px 0;
+    color: rgba(0,0,0,0.65);
+}
+
+.now_info_box {
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: auto;
+    width: 40vw;
+    min-width: 520px;
+    height: 60px;
+}
+
+.now_info {
+    padding: 10px 20px 0 20px;
+    overflow: hidden;
+}
+
+.change_box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    font-size: 17px;
+    width: 80%;
+    height: 30px;
+    float: left;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+#changeVal {
+    width: 100%;
+}
+
+input #ch_button {
+    height:30px;
+}
+
+.change_button {
+    position: relative;
+    top: 5px;
+    width: 80px;
+    float: right;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    text-align: center;
+    line-height: 15px;
+}
+
+.change_margin {
+    height: 36px;
+}
+
+
+/* 에러 표시 박스 */
+.error_next_box {
+    position: absolute;
+    bottom: -10px;
+    font-size: 12px;
+    line-height: 14px;
+    color: red;
+}

@@ -1,0 +1,144 @@
+
+div {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+ul, li {
+    list-style: none;
+}
+
+/* 첫번쨰 div */
+#pageBack {
+    width: 100vw;
+    overflow: hidden;
+}
+
+#page {
+    width: calc(100vw - 250px);
+
+    height: 100%;
+    margin-left: 250px;
+    letter-spacing: -1px;
+    overflow: hidden;
+
+}
+
+#pageMain {
+    float: left;
+    overflow: hidden;
+    width: calc(100vw - 260px);
+    max-width: 1300px;
+    padding: 0 0 72px;
+    margin-top: 5%;
+}
+
+.content {
+    overflow: hidden;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content h3 {
+    padding: 30px 0;
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content #title_p {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: lighter;
+    margin: 0 0 20px 0 ;
+}
+
+.content .info_container {
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.info_container{
+    margin-bottom: 45px;
+}
+
+.info_title {
+    overflow: hidden;
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.first h3, .third h3{
+    padding: 30px 0 0 0;
+}
+
+.info_title>p, .third p{
+    margin: 0 0 30px 0;
+    font-weight: lighter;
+    font-size: 1em;
+    opacity: 0.7;
+}
+
+.content .info_container .area_basic {
+    overflow: hidden;
+    width: 795px;
+    padding: 27px 0 29px;
+    font-size: 15px;
+    line-height: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.content .info_container .tit_basic {
+    float: left;
+    width: 134px;
+    padding: 0 37px;
+    letter-spacing: -1px;
+}
+
+.content .info_container .box_basic {
+    float: left;
+    width: 450px;
+    padding-left: 40px;
+}
+
+.third{
+    text-align: center;
+}
+
+.third p {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+.third img{
+    width: 10em;
+}
+
+/* 마우스 올려놓을때 */
+
+.area_basic:hover {
+    background-color: #eee;
+}
+
+.info_tit:hover {
+    border-radius: 0 50px 50px 0;
+    background-color: #eee;
+}
+
+/* 글씨 사이즈 */
+.tit_basic {
+    font-size: 12px;
+    color: #00000073;
+}
+
+.box_basic {
+    font-size: 17px;
+    font-weight: 100;
+    color: black;
+}
+
+

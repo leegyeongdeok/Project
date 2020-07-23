@@ -1,8 +1,8 @@
 package kk.second.dys.function;
 
-import kk.second.dys.model.netowrk.response.AdminResponse;
-import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
-import kk.second.dys.model.netowrk.response.OwnerUserApiResponse;
+import kk.second.dys.model.network.response.AdminResponse;
+import kk.second.dys.model.network.response.GeneralUserApiResponse;
+import kk.second.dys.model.network.response.OwnerUserApiResponse;
 import kk.second.dys.service.AdminApiService;
 import kk.second.dys.service.GeneralUserApiService;
 import kk.second.dys.service.OwnerUserApiService;

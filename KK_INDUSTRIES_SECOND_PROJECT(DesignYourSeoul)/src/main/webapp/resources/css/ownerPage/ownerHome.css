@@ -1,0 +1,159 @@
+
+html, body{
+    margin: 0;
+    overflow: hidden;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+ul, li {
+    list-style: none;
+}
+
+/* 첫번쨰 div */
+#pageBack {
+    width: 100vw;
+    height: 100vh;
+    min-width: 1400px;
+    margin: auto;
+}
+
+#page {
+    width: 70%;
+    margin: 0 auto 0 auto;
+    letter-spacing: -1px;
+    height: 100%;
+}
+
+/* 마이페이지 body */
+#pageMain {
+    float: left;
+    overflow: hidden;
+    width: 70vw;
+    height: 100vh;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 0 72px;
+    margin-top: 5%;
+}
+
+.content {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    letter-spacing: 0;
+    margin-bottom: 4%;
+}
+
+.head_content {
+    text-align: center;
+    margin: 100px 0 25px 0;
+    line-height: 2em;
+}
+
+.head_content>h3{
+    font-size: 2em;
+}
+
+.head_content>p{
+    font-size: 1.3em;
+}
+
+.cont_personal .tit_personal {
+    height: 22px;
+    margin-left: 33px;
+    padding: 20px 0;
+    font-size: 35px;
+    color: #000;
+    line-height: 0px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.cont_personal #title_p {
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+.tit_personal .changeinfo {
+    margin-left: 75%;
+}
+
+.cont_personal .basic_info {
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+
+/* 글씨 사이즈 */
+.tit_basic {
+    font-size: 12px;
+    color: #00000073;
+}
+
+.box_basic {
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.pro_title {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+/* 마이홈페이지 설명 css */
+.page_box_container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.box_left {
+    width: 43%;
+    height: 21vh;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    float: left;
+    margin-left: 3%;
+}
+
+.box_right {
+    width: 43%;
+    height: 21vh;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    float: right;
+}
+
+.box_left, .box_right{
+    margin-top: 25px;
+}
+
+.box_content {
+    float: left;
+    height: 18vh;
+    line-height: 1.2em;
+    padding: 10px;
+}
+
+.box_content h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+    display: inline;
+}
+
+.box_content p {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.box_img {
+    float: right;
+    margin: 10px 15px;
+    width: 120px;
+    height: 120px;
+}

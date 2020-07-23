@@ -1,0 +1,176 @@
+
+a:link {
+    color: orange;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.wrap {
+    min-height: 830px;
+}
+
+.find_info {
+    line-height: 14px;
+    padding-top: 20px;
+    text-align: center;
+    color: #8e8e8e;
+    border-top: 1px solid #e4e4e5;
+}
+
+/* 로그인버튼 */
+.btn_area {
+    margin-top: 20px;
+}
+
+.btn_Ok {
+    display: block;
+    width: 18%;
+    height: 42px;
+    margin-left: 27%;
+    margin-right: 10%;
+    border: none;
+    border-radius: 0;
+    background-color: orange;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    -webkit-appearance: none;
+    float: left;
+}
+
+.btn_Pw {
+    display: block;
+    width: 18%;
+    height: 42px;
+    border: none;
+    border-radius: 0;
+    background-color: orange;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    -webkit-appearance: none;
+}
+
+.container, #header {
+    width: 715px;
+    margin: 0 auto;
+}
+
+/* 버튼 아이디비번 사이즈 */
+fieldset {
+    border: 0;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.input_row {
+    width: 69%;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    border: solid 1px #dadada;
+    background: #fff;
+}
+
+h4 > label {
+    margin-left: 14%;
+}
+
+.int {
+    font-size: 15px;
+    line-height: 16px;
+    position: relative;
+    z-index: 9;
+    width: 100%;
+    height: 16px;
+    padding: 7px 0 6px;
+    color: #000;
+    border: none;
+    background: #fff;
+    -webkit-appearance: none;
+}
+
+.logoimg {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    margin-left: 230px;
+    padding-top: 0px;
+}
+
+.container {
+    padding-top: 12%;
+}
+
+.title h1 {
+    width: 35%;
+    border-bottom: 4px solid #989494;
+}
+
+.title, .account {
+    padding-bottom: 3px;
+    padding: 2px;
+    width: 71%;
+    margin: auto;
+}
+
+.account1 {
+    margin-top: 4%;
+    margin-bottom: 8%;
+    width: 72%;
+    margin: auto;
+}
+
+.id_p {
+    float: left;
+    margin-left: 5%;
+    margin-top: 0;
+    width: 150px;
+}
+
+.type_p {
+    margin-left: 5%;
+    margin-top: 0;
+    margin-right: 0%;
+    float: left;
+    width: 100px;
+}
+
+.idbirth_p {
+    margin-left: 70%;
+    width: 165px;
+}
+
+.id_list {
+    padding-left: 0;
+}
+
+.id_list li {
+    list-style: none;
+}
+
+.id_list li > strong {
+    float: left;
+    margin-right: 40%;
+    margin-left: 10%;
+}
+
+.id_list li > strong {
+    font-weight: 100;
+}
+
+li p > strong {
+    font-weight: 100;
+}
+
+.id_check {
+    float: left;
+    margin-top: 7px;
+}

@@ -1,0 +1,66 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.success_box {
+    width: 100vw;
+    max-width: 800px;
+    margin: 50px auto
+}
+
+.success_title {
+    width: 100%;
+    text-align: center;
+}
+
+.title_img {
+    width: 40vw;
+    max-width: 450px;
+}
+
+.success_title> h1{
+    font-size: 40px;
+    margin: 0;
+}
+
+.success_body {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto 50px auto;
+}
+
+.success_body>p{
+    margin: 10px 0 0 0;
+}
+
+
+.btn_contain{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.success_button, .success_button_right {
+    border-radius: 5px;
+    width: 40%;
+    float: left;
+    background-color: orange;
+    height: 35px;
+}
+
+.success_button_right{
+    float: right;
+}
+
+.success_button> a, .success_button_right>a{
+    text-decoration: none;
+    color: white;
+}
+
+.button_value {
+    font-size: 25px;
+}
+

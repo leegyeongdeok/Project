@@ -1,0 +1,294 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.business_inquiry_detail_bok {
+    padding-top: 100px;
+    margin-left: 300px;
+    text-align: center;
+    width: 60vw;
+    height: auto;
+}
+
+.business_inquiry_tit {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.business_inquiry_desc {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.content{
+    margin: 50px auto 50px 300px;
+    width: 60vw;
+}
+.business_inquiry_brd_title {
+    position: relative;
+    height: 80px;
+    padding: 15px;
+    font-size: 25px;
+    border-top: 2px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.business_inquiry_detail_tbl_cell {
+    width: 950px;
+    height: 80px;
+    display: table-cell;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.business_inquiry_brd_date {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    font-size: 15px;
+}
+
+.business_inquiry_editor_area {
+    font-size: 1em;
+    min-height: 300px;
+    padding: 40px 20px;
+    line-height: 25px;
+    border-bottom: 1px solid #222;
+}
+
+table.business_inquiry_tbl_pren {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+}
+
+table.business_inquiry_tbl_pren th {
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    color: #222;
+    text-align: left;
+}
+
+table.business_inquiry_tbl_pren td {
+    position: relative;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.btn_area {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.listgo {
+    margin-top: 10px;
+    width: 120px;
+    height: 60px;
+    border: none;
+    border-radius: 0;
+    background-color: orange;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    -webkit-appearance: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.business_inquiry_ReviewList {
+    width: 100%;
+    margin-top: 19px;
+}
+
+.business_inquiry_ReviewList__Header {
+    padding: 10px 20px;
+}
+
+fieldset {
+    border: 0;
+}
+
+
+
+
+
+ul, ul li {
+    list-style: none;
+}
+
+.business_inquiry_ReviewItem__User {
+    padding: 30px;
+}
+
+.Review_review_list {
+    padding: 0 30px;
+}
+
+.business_inquiry_ReviewItem__UserName {
+    margin-right: 60%;
+}
+
+.business_inquiry_ReviewItem__ReviewDate, .business_inquiry_ReviewItem__Review_reviewDate
+{
+    float: right;
+    font-size: 14px;
+}
+
+.business_inquiry_ReviewItem__ReviewText, .business_inquiry_ReviewItem__Review_reviewText
+{
+    margin-top: 20px;
+}
+
+.business_inquiry_ReviewItem {
+    position: relative;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.business_inquiry_ReviewItem__review, .reviewTextarea_box {
+    margin: 30px;
+}
+
+.business_inquiry_Review_reviewItem {
+    position: relative;
+    border-top: 1px solid #DBDBDB;
+}
+
+.business_inquiry_brd_name {
+    margin: 25px 0 0 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.business_inquiry_brd_writer {
+    font-size: 20px;
+}
+
+.reviewTextarea_box {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #b3b3b3;
+}
+/* 뎃글 */
+.review_textarea {
+    overflow: hidden;
+    position: relative;
+    height: 25px;
+    padding: 11px 82px 0 14px;
+    background-color: #fff;
+    border-bottom:  1px solid #ededed;
+}
+.review_write_area {
+    max-width: 100%;
+    padding-bottom: 8px;
+}
+.review_Name {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 11px;
+    right: 82px;
+    bottom: 0;
+    left: 15px;
+    height: 23px;
+    font-size: 12px;
+    color: #000;
+    font-weight: 700;
+    line-height: 2.08;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.review__reply_textarea {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 100%;
+    height: 56px;
+    padding: 6px 0 0;
+    margin: 0;
+    padding-right: 16px;
+    border: none;
+    color: #333;
+    background-color: rgba(255,255,255,.001);
+    font-size: 12px;
+    line-height: 18px;
+    -webkit-appearance: none;
+    vertical-align: top;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.review_upload {
+    right: 0;
+    bottom: 0;
+    height: 44px;
+    width: 50px;
+    background-color: #fff;
+    border-top-color: #ededed;
+    border-left-color: #ededed;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    color: orange;
+
+
+}
+.review_upload_box{
+    position: relative;
+    height: 43px;
+    border-top: 1px solid #ededed;
+    margin-bottom:1px;
+    text-align: right;
+}
+.business_inquiry_Review_reviewTextarea{
+    margin:0 30px;
+    border-top: 1px solid #b3b3b3
+}
+
+.reviewicon {
+    float:left;
+    margin-top:30px;
+
+    left: 0;
+    width: 20px;
+    height: 20px;
+
+    background-image: url(/resources/image/review.PNG);
+    background-repeat: no-repeat;
+}
+
+.reviewclose{
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    background-color: white;
+    border-top: 1px solid #b3b3b3;
+}
+.Review_review_btn{
+    width: 50px;
+    height: 30px
+
+}
+.business_inquiry_ReviewList__Title{
+    padding-bottom:10px;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+
+.business_inquiry_desc>p{
+    margin-top: 10px;
+}

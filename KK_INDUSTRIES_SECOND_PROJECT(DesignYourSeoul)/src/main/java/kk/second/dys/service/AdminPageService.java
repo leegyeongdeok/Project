@@ -1,9 +1,18 @@
 package kk.second.dys.service;
 
 import kk.second.dys.model.entity.*;
-import kk.second.dys.model.netowrk.response.AccommodationResponse;
-import kk.second.dys.model.netowrk.response.GeneralUserApiResponse;
+import kk.second.dys.model.entity.question.GeneralQuestion;
+import kk.second.dys.model.entity.question.OwnerQuestion;
+import kk.second.dys.model.entity.themeList.Activity;
+import kk.second.dys.model.entity.themeList.Attraction;
+import kk.second.dys.model.entity.themeList.Cafe;
+import kk.second.dys.model.entity.themeList.FamousRestaurant;
+import kk.second.dys.model.entity.user.GeneralUser;
+import kk.second.dys.model.entity.user.OwnerUser;
 import kk.second.dys.repository.*;
+import kk.second.dys.repository.question.GeneralQuestionRepository;
+import kk.second.dys.repository.question.OwnerQuestionRepository;
+import kk.second.dys.repository.themeList.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

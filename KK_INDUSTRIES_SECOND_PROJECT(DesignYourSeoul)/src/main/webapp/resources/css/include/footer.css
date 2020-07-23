@@ -1,0 +1,165 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.footer_back {
+    position: relative;
+    background-color: #fff2f2;
+    width: 100vw;
+    height: 200px;
+}
+
+.footer_box {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    margin: 0 auto;
+    width: 90vw;
+    height: 50%;
+}
+
+.footer_content_top{
+    display: inline;
+    margin: 0 5% 1% 0;
+    width: 50%;
+    float: left;
+}
+
+.footer_notice{
+    font-size: 1.2em;
+}
+
+.title_name{
+    font-size: 1.7em;
+    margin-right: 1.5%;
+    color: orange;
+}
+
+.footer_content_body {
+    width: 50%;
+    float: left;
+}
+
+.footer_content_body a {
+    font-size: 1em;
+    margin-right: 2%;
+    margin-top: 3%;
+    color:#b3a3a3;
+}
+
+.title_name {
+    font-family: Big Shoulders Display;
+}
+
+.footer_corp_box{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    text-align: end;
+    margin: 0 auto;
+    width: 93vw;
+}
+
+.footer_corp_box h3{
+    font-size: 1.5em;
+}
+
+.footer_corp_box p{
+    display: inline;
+    margin: 0 10px 0 0;
+    opacity: 0.4;
+}
+
+.footer_image {
+    width: 4%;
+}
+
+.sensor{
+    position: relative;
+    background-color: darkgray;
+    border-radius: 40px 0 0 40px;
+    opacity: 0;
+    width: 8vw;
+    max-width: 90px;
+    height: 200px;
+    float: right;
+    margin: 0 auto;
+}
+
+.moreInfo{
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    margin: 8px 0 0 3vw;
+}
+
+.company_info{
+    position: absolute;
+    left: 10vw;
+    top: 15px;
+    color: whitesmoke;
+    line-height: 2em;
+    display: none;
+}
+
+.company_info h3{
+    margin: 0;
+    font-size: 2.2vw;
+}
+
+.company_info p{
+    margin: 0;
+    font-size: 1.6vw;
+    opacity: 0.6;
+}
+
+.company_intro{
+    position: absolute;
+    text-align: right;
+    right: 9vw;
+    top: 32px;
+    color: whitesmoke;
+    line-height: 2em;
+    display: none;
+}
+
+.company_intro h3{
+    margin: 0;
+    font-size: 2.8vw;
+    opacity: 0.8;
+}
+
+.company_intro p{
+    margin: 0;
+    font-size: 2.6vw;
+    opacity: 0.6;
+}
+
+.company_from{
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+    color: whitesmoke;
+    line-height: 2em;
+    display: none;
+}
+
+.company_from p{
+    margin: 20px 10vw 0 0;
+    font-size: 2.6vw;
+    float: left;
+    opacity: 0.6;
+}
+
+.company_image{
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    height: 4vw;
+}
+
+

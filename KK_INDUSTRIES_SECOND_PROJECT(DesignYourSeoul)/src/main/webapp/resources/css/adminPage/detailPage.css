@@ -1,0 +1,65 @@
+.top_title{
+    padding-top: 150px;
+    text-align: center;
+    width: 100vw;
+    min-width: 800px;
+    max-width: 1000px;
+    height: auto;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.content{
+    margin: 50px auto;
+    width: 100vw;
+    min-width: 800px;
+    max-width: 1000px;
+}
+
+.brd_title {
+    position: relative;
+    width: 70%;
+    height: 80px;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 25px;
+    border-top: 2px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.notice_detail_tbl_cell {
+    width: 950px;
+    height: 80px;
+    display: table-cell;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.brd_date {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    font-size: 15px;
+}
+
+.brd_editor {
+    width: 70%;
+    min-height: 250px;
+    margin: 0 auto;
+    padding: 15px;
+    border-bottom: 1px solid #222;
+}
+
+.btn_area{
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.btn_area input{
+    width: 80px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    border: none;
+    font-size: 15px;
+}

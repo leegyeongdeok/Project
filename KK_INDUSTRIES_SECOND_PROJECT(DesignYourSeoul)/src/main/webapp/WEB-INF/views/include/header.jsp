@@ -1,231 +1,123 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="ko">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <style type="text/css">
+        @-ms-viewport {
+            width: device-width
+        }
 
-	<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,300,400,500,600,700,800,900&display=swap&subset=latin-ext,vietnamese"
-		  rel="stylesheet">
+        @-o-viewport {
+            width: device-width
+        }
 
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
+        @viewport {
+            width: device-width
+        }
+    </style>
 
-		.totalmenu_text {
-			color: #ff9900;
-			font-size: 14pt;
-			font-family: Big Shoulders Display;
-		}
-
-		a:link {
-			color: black;
-			text-decoration: none;
-		}
-
-		a:visited {
-			color: black;
-			text-decoration: none;
-		}
-
-		#menu2 {
-			float: left;
-			margin-left: 2%;
-			height: 50px;
-			width: 50%;
-			z-index: 9900;
-			padding-top: 1%;
-		}
-
-		#menu2 .login > li {
-			display: inline;
-			float: left;
-			width: 15%;
-			height: 50px;
-			line-height: 50px;
-			text-align: center;
-			position: relative;
-			margin: 0;
-			padding: 0;
-		}
-
-		#menu2 ul {
-			width: 100%;
-			margin: 0 auto;
-		}
-
-		#menu1 {
-			margin-left: 67%;
-			height: 50px;
-			width: 10%;
-			z-index: 9900;
-			padding-top: 1%;
-		}
-
-		#menu1 ul li {
-			display: block;
-			z-index: 9999;
-		}
-
-		#menu1 ul {
-			width: 560px;
-			margin: 0 auto;
-			padding-right: 0%;
-		}
-
-		#menu1 .main {
-			margin-left: 10%;
-		}
-
-		#menu1 .main .sub {
-			position: absolute;
-			top: 50px;
-			left: 0%;
-			width: 100%;
-			display: none;
-		}
-
-		#menu1 .main > li {
-			display: inline;
-			float: left;
-			width: 140px;
-			height: 50px;
-			line-height: 50px;
-			text-align: center;
-			position: relative;
-			margin: 0;
-		}
-
-		#menu1 .main > li:hover .sub {
-			display: block;
-		}
-
-		#menu1 .main > li a {
-			display: block;
-		}
-
-		/* #menu1 .main .sub {
-           position: absolute;
-           top: 50px;
-           left: 0%;
-           width: 100%;
-           display: none;
-        } */
-		#menu1 .main .sub li {
-			position: relative;
-			padding: 0px 0px;
-			background: linear-gradient(to right, #f9ff00, #ffa500ba);
-		}
-
-		.sub li a > p {
-			color:#ff00004f;
-		}
-
-		#menu1 .main .sub li a:hover {
-			background: #36FF96;
-		}
-
-		/* 메뉴 타이틀 마우스 오버시 색변경 */
-		.main li:hover {
-			background-color: #848CB5;
-		}
-
-	</style>
-
+    <title>Design Your Seoul</title>
+    <link
+            href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,300,400,500,600,700,800,900&display=swap&subset=latin-ext,vietnamese"
+            rel="stylesheet">
+    <link rel="stylesheet" href="/resources/css/include/header.css">
 </head>
-<body id="menubody">
 
-<%
-	String id = request.getParameter("id");
-%>
+<body>
+<script type="text/javascript" src="/resources/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/resources/js/include/header.js"></script>
 
-<input id="account" type="hidden" value="<%=id%>">
 
-<div id="totalmenu">
-	<div id="menu2">
-		<ul class="login" >
-			<li><a href="/dys">
-				<image src="/resources/image/logo/headerlogo.png" style="width: 60px; height: auto;
-      margin-left: -30px">
-			</a>
-			<li><a href="/dys/login"><p class="totalmenu_text">로그인</p></a></li>
-		</ul>
-	</div>
+<header id="totalMenu">
+    <div id="menu2">
+        <ul class="login">
+            <li>
+                <img src="/resources/image/logo/headerlogo.png"
+                     style="width: 60px; height: auto; margin-left: -30px; cursor:pointer" onclick="mainHome()">
+            </li>
 
-	<div id="menu1">
-		<ul class="main" id="menulist">
-			<li><a href="#"><p class="totalmenu_text">회사</p></a>
-				<ul class="sub">
-					<li><a onclick="company()"><p class="totalmenu_text">회사소개</p></a></li>
-				</ul>
-			</li>
+            <li id="user_box">
+                <p id="login" class="all_text" onclick="loginJudge()">로그인</p>
+                <div id="user_info">
+                    <p class="user_info_txt" style="cursor:pointer;" onclick="userInformation()">회원정보 보기</p>
+                    <p class="user_info_txt" style="cursor:pointer;" onclick="logout()">로그아웃</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-			<li><a href="#"><p class="totalmenu_text">코스</p></a>
-				<ul class="sub">
-					<li><a href="/dys/courseRanking"><p class="totalmenu_text">코스랭킹</p></a></li>
-					<li><a href="#"><p class="totalmenu_text">코스짜기</p></a></li>
-				</ul>
-			</li>
-			<li><a href="#"><p class="totalmenu_text">테마</p></a>
-				<ul class="sub">
-					<li><a onclick="foodList()"><p class="totalmenu_text">맛집</p></a></li>
-					<li><a onclick="cafeList()"><p class="totalmenu_text">카페</p></a></li>
-					<li><a onclick="hotelList()"><p class="totalmenu_text">숙소</p></a></li>
-					<li><a onclick="attractionList()"><p class="totalmenu_text">명소</p></a></li>
-					<li><a onclick="actiList()"><p class="totalmenu_text">액티비티</p></a></li>
-				</ul>
-			</li>
-			<li><a href="#"><p class="totalmenu_text">고객센터</p></a>
-				<ul class="sub">
-					<li><a href="#"><p class="totalmenu_text">공지사항</p></a></li>
-					<li><a href="#"><p class="totalmenu_text">문의사항</p></a>
-					<li><a href="#"><p class="totalmenu_text">계시판</p></a>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</div>
+    <div id="menu1">
+        <ul class="main" id="menulist">
+            <li>
+                <p class="totalMenu_text all_text">회사</p>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/resources/js/jquery.serializeObject.js"></script>
-<script type="text/javascript">
+                <ul class="sub">
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="company()">회사소개</p>
+                    </li>
+                </ul>
+            </li>
 
-	var id = $("#account").val();
+            <li><a href="#">
+                <p class="totalMenu_text all_text">코스</p>
+            </a>
+                <ul class="sub">
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="courseRanking()">코스보기</p>
+                    </li>
+                    <li>
+                        <p class="totalMenu_text all_text">코스짜기</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="totalMenu_text all_text">테마</p>
 
-	function actiList() {
+                <ul class="sub">
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="food()">맛집</p>
+                    </li>
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="cafe()">카페</p>
+                    </li>
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="accommodation()">숙소</p>
+                    </li>
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="attraction()">명소</p>
+                    </li>
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="activity()">액티비티</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="totalMenu_text all_text">고객센터</p>
 
-		location.href = "/dys/activityList";
-	}
+                <ul class="sub">
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="notice()">공지사항</p>
+                    </li>
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="question()">문의사항</p>
 
-	function attractionList() {
+                    <li>
+                        <p class="totalMenu_text all_text" onclick="board()">게시판</p>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
 
-		location.href = "/dys/attractionList";
-	}
-
-	function cafeList() {
-
-		location.href = "/dys/cafeList";
-	}
-
-	function foodList() {
-
-		location.href = "/dys/foodList";
-	}
-
-	function hotelList() {
-
-		location.href = "/dys/hotelList";
-	}
-
-	function company() {
-
-		location.href = "/dys/Intro";
-	}
-
-</script>
 
 </body>
+
 </html>

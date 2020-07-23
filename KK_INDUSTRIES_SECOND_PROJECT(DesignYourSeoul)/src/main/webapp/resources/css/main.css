@@ -1,0 +1,247 @@
+html, body {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*first sec*/
+
+.head_content{
+    color: orange;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mainFirst{
+    margin: 0;
+    padding: 0;
+}
+
+#mainVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+#intro {
+    font-family: sans-serif;
+    top: 45vh;
+    right: 5vw;
+    position: absolute;
+    font-weight: 100;
+    color: white;
+    width: auto;
+    font-size: 1.2em;
+}
+
+/*second sec*/
+
+.slide {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+
+    background-color: black;
+    -webkit-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
+}
+
+
+.sd1 {
+    background-image: url(/resources/image/main2/main2_1.png);
+}
+
+.sd2 {
+    background-image: url(/resources/image/main2/main2_2.png);
+}
+
+.sd3 {
+    background-image: url(/resources/image/main2/main2_3.png);
+}
+
+.sd4 {
+    background-image: url(/resources/image/main2/main2_4.png);
+}
+
+.sd5 {
+    background-image: url(/resources/image/main2/main2_5.png);
+}
+
+.slide_cotent {
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vw;
+    opacity: 0;
+    background:rgba(0, 0, 0, 0.6);
+
+    -webkit-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
+}
+
+.slide:hover .slide_cotent {
+    opacity: 1;
+    -webkit-transition-delay: 0.35s;
+    transition-delay: 0.35s;
+}
+
+.slide:hover {
+
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+
+/*third sec*/
+
+.back {
+    margin: 0;
+    width: 20vw;
+    height: 100vh;
+    float: left;
+    border: 0px;
+    border-color: #ffffff;
+    border-style: solid;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    counter-increment: bc;
+}
+
+.snip1200 {
+    margin: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+}
+
+.snip1200 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
+}
+
+.snip1200 img {
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0.9;
+}
+
+.snip1200 figcaption {
+    position: absolute;
+    top: 45%;
+    left: 7%;
+    right: 7%;
+    bottom: 45%;
+    border: 1px solid white;
+    border-width: 1px 1px 0;
+}
+
+.snip1200 .heading {
+    overflow: hidden;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.snip1200 h2 {
+    font-size: 24px;
+    display: table;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    font-weight: 400;
+    font-family: Big Shoulders Display;
+}
+
+.snip1200 h2 span {
+    font-weight: 800;
+}
+
+.snip1200 h2:before,
+.snip1200 h2:after {
+    position: absolute;
+    display: block;
+    width: 1000%;
+    height: 1px;
+    content: '';
+    background: white;
+    top: 50%;
+}
+
+.snip1200 h2:before {
+    left: -1000%;
+}
+
+.snip1200 h2:after {
+    right: -1000%;
+}
+
+.snip1200 p {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    opacity: 0;
+    line-height: 1.6em;
+    font-size: 0.9em;
+}
+
+.snip1200 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.snip1200:hover img,
+.snip1200.hover img {
+    opacity: 0.25;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.snip1200:hover figcaption,
+.snip1200.hover figcaption {
+    top: 20%;
+    bottom: 20%;
+}
+
+.snip1200:hover p,
+.snip1200.hover p {
+    opacity: 1;
+    -webkit-transition-delay: 0.35s;
+    transition-delay: 0.35s;
+}

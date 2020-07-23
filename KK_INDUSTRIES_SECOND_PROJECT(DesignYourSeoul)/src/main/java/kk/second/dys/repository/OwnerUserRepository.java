@@ -1,6 +1,6 @@
 package kk.second.dys.repository;
 
-import kk.second.dys.model.entity.OwnerUser;
+import kk.second.dys.model.entity.user.OwnerUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

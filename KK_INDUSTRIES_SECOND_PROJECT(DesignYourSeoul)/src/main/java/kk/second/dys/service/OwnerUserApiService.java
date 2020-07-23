@@ -1,21 +1,40 @@
 package kk.second.dys.service;
 
-import kk.second.dys.model.entity.OwnerUser;
-import kk.second.dys.model.netowrk.request.OwnerUserApiRequest;
-import kk.second.dys.model.netowrk.response.OwnerUserApiResponse;
+import kk.second.dys.model.entity.user.OwnerUser;
+import kk.second.dys.model.entity.board.OwnerBoard;
+import kk.second.dys.model.entity.question.OwnerQuestion;
+import kk.second.dys.model.enumclass.UserStatus;
+import kk.second.dys.model.network.request.OwnerUserApiRequest;
+import kk.second.dys.model.network.response.OwnerUserApiResponse;
 import kk.second.dys.repository.OwnerUserRepository;
+import kk.second.dys.repository.board.OwnerBoardReplyRepository;
+import kk.second.dys.repository.board.OwnerBoardRepository;
+import kk.second.dys.repository.question.OwnerQuestionReplyRepository;
+import kk.second.dys.repository.question.OwnerQuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class OwnerUserApiService {
 
     @Autowired
     private OwnerUserRepository repository;
+
+    @Autowired
+    private OwnerBoardRepository boardRepository;
+
+    @Autowired
+    private OwnerBoardReplyRepository boardReplyRepository;
+
+    @Autowired
+    private OwnerQuestionRepository questionRepository;
+
+    @Autowired
+    private OwnerQuestionReplyRepository questionReplyRepository;
 
     public OwnerUserApiResponse create(OwnerUserApiRequest request) {
         OwnerUser user = OwnerUser.builder()
@@ -35,7 +54,6 @@ public class OwnerUserApiService {
     public OwnerUserApiResponse getAccountAndPswd(String account, String pswd){
 
         return repository.findByAccountAndPassword(account, pswd)
-
                 .map(user -> response(user))
                 .orElse(null);
 
@@ -44,9 +62,6 @@ public class OwnerUserApiService {
     public OwnerUserApiResponse getAccount(String account){
         return response(repository.findByAccount(account));
     }
-
-
-
     public List<OwnerUserApiResponse> ListReadForNameAndPhone(String name, String phone) {
         List<OwnerUser>  ownerUserList=  repository.findAllByNameAndPhoneNum(name, phone);
         List<OwnerUserApiResponse> result = new ArrayList<>();
@@ -64,15 +79,65 @@ public class OwnerUserApiService {
         return response(user);
     }
 
-    public OwnerUserApiResponse updateAccount(String account, String newAccount) {
-        OwnerUser user =  repository.findByAccount(account);
-        user.setAccount(newAccount);
+    public OwnerUserApiResponse updateName(String id, String name) {
+        OwnerUser user =  repository.findByAccount(id);
+        user.setName(name);
         repository.save(user);
         return response(user);
     }
 
+    public OwnerUserApiResponse updateBirth(String id, String birth) {
+        OwnerUser user =  repository.findByAccount(id);
+        user.setBirth(birth);
+        repository.save(user);
+        return response(user);
+    }
+
+    public OwnerUserApiResponse updateEmail(String account, String email) {
+        OwnerUser user =  repository.findByAccount(account);
+        user.setEmail(email);
+        repository.save(user);
+        return response(user);
+    }
+
+    public OwnerUserApiResponse updatePhone(String account, String phone) {
+        OwnerUser user =  repository.findByAccount(account);
+        user.setPhoneNum(phone);
+        repository.save(user);
+        return response(user);
+    }
+
+    public OwnerUserApiResponse updateStatus(String account){
+        OwnerUser user =  repository.findByAccount(account);
+        int val = user.getStatus().getId();
+        if(val == 0){
+            user.setStatus(UserStatus.UNREGISTERED);
+            repository.save(user);
+        }else{
+            user.setStatus(UserStatus.REGISTERED);
+            repository.save(user);
+        }
+        return response(user);
+    }
+
+    @Transactional
     public OwnerUserApiResponse delete(String account) {
         OwnerUser user =  repository.findByAccount(account);
+        List<OwnerQuestion> list = questionRepository.findAllByOwnerUser(user);
+        List<OwnerBoard> boardList = boardRepository.findAllByOwnerUser(user);
+
+        for(OwnerQuestion question : list){
+            questionReplyRepository.findByOwnerQuestion(question).ifPresent(reply -> questionReplyRepository.delete(reply));
+            questionRepository.delete(question);
+        }
+
+        for(OwnerBoard board : boardList){
+            boardReplyRepository.deleteAllByOwnerBoard(board);
+            boardRepository.delete(board);
+        }
+
+
+        boardReplyRepository.deleteAllByOwnerUser(user);
         repository.delete(user);
         return response(user);
     }

@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     menuResizer();
     $('#menu').on('click', function (e) {
@@ -42,29 +41,13 @@ function menuResizer() {
     width = window.innerWidth || document.body.clientWidth;
     var menuClass = $menu.attr('class');
 
-    if(width>=1500){
+    if (width >= 1500) {
         $menu_item.css('margin-top', '4vh')
-    }else{
+    } else {
         $menu_item.css('margin-top', '5vh')
     }
 
-    if (width * 0.02 > 30) {
-        $menu_item.css('font-size', '30px');
-    } else {
-        $menu_item.css('font-size', '2vw');
-    }
 
-    if (width * 0.02 < 20) {
-        $menu_item.css('font-size', '20px');
-    } else {
-        $menu_item.css('font-size', '2vw');
-    }
-
-    if (width < 650) {
-        $side_footer.css('font-size', '12px')
-    } else {
-        $side_footer.css('font-size', '15px')
-    }
     if (menuClass != "menu") {
         sidebar();
     }
@@ -152,17 +135,10 @@ function sidebar() {
             $menu_item.css('display', 'block');
             $side_footer.css('display', 'block');
 
-            if(width /3 >250){
-                $sidebar.animate({
-                    width: '250px',
-                    'background-color': 'black'
-                }, 500, 'swing');
-            }else{
-                $sidebar.animate({
-                    width: '30%',
-                    'background-color': 'black'
-                }, 500, 'swing');
-            }
+            $sidebar.animate({
+                width: '300px',
+                'background-color': 'black'
+            }, 500, 'swing');
 
 
             $menu.animate({
@@ -178,7 +154,7 @@ function sidebar() {
             $menu_item.css('display', 'none');
             $side_footer.css('display', 'none');
             $sidebar.animate({
-                width: '10vw',
+                width: '150px',
                 'background-color': 'rgba(255, 255, 255, 0)'
             }, 500, 'swing');
 

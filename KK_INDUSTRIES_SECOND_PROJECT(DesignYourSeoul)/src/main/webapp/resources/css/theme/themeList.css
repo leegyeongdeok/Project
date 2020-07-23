@@ -1,0 +1,215 @@
+@import url('/resources/css/bootstrap-4.4.1.min.css');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.totalList {
+    height: 140%;
+    min-height: 100%;
+    width: 100vw;
+}
+
+.themeTitle{
+    padding-top: 150px;
+    text-align: center;
+    color: #ffaf00;
+    font-family: Big Shoulders Display;
+    font-size: 30Px;
+}
+
+.list_search {
+    margin-left: 70%;
+    margin-top: -25px;
+}
+
+.search_text {
+    height: 22px;
+}
+
+.search_button {
+    height: 25px;
+    width: 35px;
+    font-weight: 100;
+    margin-left: 15px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+}
+
+.title h1 {
+    padding-left: 13%;
+    margin: 0;
+    font-family: Big Shoulders Display;
+    font-weight: 400;
+    font-size: 25pt;
+}
+
+
+.main_title{
+    font-size: 62px;
+}
+
+/* 넘기기버튼 */
+
+/* top10 */
+.toplist {
+    height: 400px;
+    padding-top: 25px;
+}
+
+.rankingList {
+    /* padding-top: 2%; */
+    overflow: hidden;
+    width: 90vw;
+    height: 250px;
+    position: relative;
+    margin: auto;
+    left: 0;
+}
+
+
+.rankingList li {
+    padding-top: 3%;
+    list-style: none;
+    float: left;
+    margin-left: 25px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.rankingList a {
+    padding-right: 22px;
+}
+
+
+/* left, right btn*/
+
+.btn_container{
+    margin: 0;
+    text-align: center;
+}
+#back {
+    margin-right: 400px;
+}
+
+#next {
+
+}
+
+#back, #next{
+    color: rgb(115, 115, 115);
+    overflow: visible;
+}
+
+
+
+/* 나머지 리스트 */
+.otherList {
+    margin-top: 4%;
+}
+
+.otherList .title {
+    margin-bottom: 4%;
+}
+
+.list {
+    /* padding-top: 2%; */
+    width: 90vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 5vw 30px 5vw;
+
+    text-align: center;
+}
+
+
+.list ul {
+    width: 90vw;
+    overflow: hidden;
+    text-align: center;
+}
+.list li {
+    text-align: center;
+    list-style: none;
+    margin-bottom: 20px;
+    overflow: hidden;
+    float: left;
+    margin-left: 25px;
+    width: 16vw;
+    min-width: 200px;
+    height: 200px;
+
+}
+
+.list li a {
+    padding-right: 22px;
+}
+
+/* 리스트 버튼 */
+#buttonli {
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+#buttonli button, #buttonli a {
+    padding-left: 10px;
+}
+
+/* 이미지위에 마우스 올릴때 css */
+
+.listtotal span {
+    display: inline-block;
+}
+
+span>p{
+    opacity: 0;
+    position: relative;
+    bottom: 195px;
+    text-align: center;
+}
+
+span>img{
+    height: 200px;
+    width: 16vw;
+    min-width: 250px;
+}
+
+a> span {
+    z-index: 10;
+    background-color: black;
+    height: 225px;
+}
+
+span:hover p{
+    opacity:1;
+}
+
+span:hover img {
+    opacity: 0.2;
+}
+
+p> strong {
+    color: black;
+}
+
+.btn {
+    margin-top: 15px;
+    display: inline;
+    cursor: pointer;
+}
+
+.pageLeftBtn, .pageRightBtn{
+    color: #565656;
+    width: 20px;
+    font-size: 1.2em;
+}
+
+

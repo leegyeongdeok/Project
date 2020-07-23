@@ -1,0 +1,365 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.adminpage_box {
+    padding-top: 30px;
+}
+#page-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.head_tit> h1 {
+    margin-left: 30px;
+    color: #565656;
+}
+.tabs {
+    position: relative;
+min-height: 100%; /* This part sucks */
+clear: both;
+    margin-top: 1%;
+}
+
+.tab {
+/*float: left; */
+height: 50px;
+}
+
+
+.tab label {
+    padding: 10px;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+    width: 100px;
+    display: block;
+    text-align: center;
+    color: #000000;
+}
+
+.tab [type=radio] {
+    display: none;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 121px;
+    padding-top: 15px;
+    background: white;
+}
+
+.tab [type=radio]:checked ~ label {
+    background: orange;
+    z-index: 2;
+}
+
+.tab [type=radio]:checked ~ label ~ .content {
+    display: block;
+}
+
+.tab [type=radio]:not(:checked) ~ label ~ .content {
+    display: none;
+}
+/* 페이지 위치잡기 */
+
+.content table {
+    margin: 30px auto;
+    width: 90%;
+    border-collapse: collapse;
+    border-top: 3px solid #ffa500;
+}
+
+.member_table {
+    border: 1px solid #ccc;
+}
+
+.member_tr{
+    height: 45px;
+}
+
+.member_tr:hover{
+    background-color: orange;
+}
+
+.member_tr> th, .member_tr> td {
+    border-right: 1px solid #ccc;
+}
+
+.member_tr> td {
+    text-align: center;
+    border-top:1px solid #ccc;
+}
+
+.member_tr> td:HOVER{
+    cursor: pointer;
+}
+
+.search_btn {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    height: 34px;
+    overflow: hidden;
+}
+
+.content_title {
+    float: left;
+    margin-left: 10%;
+}
+
+thead> tr{
+    height: 35px;
+
+    background: #e4e0e0
+}
+
+.search_btn> input{
+    width: 220px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+.search_btn> button{
+    width: 50px;
+    height: 30px;
+}
+
+/* 페이지 버튼 */
+.page_btn {
+    margin-top: 2%;
+}
+
+.page_btn ul{
+    width: 21%;
+    margin: 0 auto;
+    margin-left: 43%;
+}
+
+.page_btn li{
+    list-style: none;
+}
+
+.page_btn input {
+    clear: none;
+    border: 0px none;
+    float: none;
+    background-color: transparent;
+    width: 30px;
+    height: 25px;
+    font-size: 15pt;
+}
+
+.page_btn input:HOVER {
+    cursor: pointer;
+}
+tbody tr:nth-child(2n) {
+    background-color:  #e4e0e0
+}
+tbody tr:nth-child(2n+1) {
+    background-color: #fde6be73
+}
+
+
+
+
+/* test */
+section> ul li {
+    list-style: none;
+    height: 315px;
+}
+
+/* 링크색 변경 */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* 첫번쨰 div */
+#mypageback {
+    min-width: 1180px;
+    margin-top: 1%;
+}
+
+#mypage {
+    width: 1400px;
+    margin: 0 auto;
+    letter-spacing: -1px;
+    height: 100%;
+}
+
+/* 리스트 목록 */
+
+.list_body{
+    margin-top: -6%;
+}
+
+.list_img {
+    float: left;
+    width: 240px;
+    height: 240px;
+    margin-top: 5%;
+}
+
+.info_a {
+    margin-top:2%;
+    margin-left: 35%;
+    font-size: 13pt;
+}
+
+.store_info_title {
+    font-size: 13pt;
+    margin-top: 2%;
+    width: 60%;
+    margin-left: 9%;
+    float: left;
+}
+
+.store_info {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.store_info_title> a{
+    margin-left: 50%;
+}
+
+.store_info_title> p{
+    margin-bottom: 0%;
+}
+
+.info_name {
+    float: left;
+}
+
+.info_a {
+    margin-left: 70%;
+    width: 50%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+.list_body>li {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+
+/* 탭 css */
+
+.list_body label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+.list_body label:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.list_body>input {
+    display: none;
+}
+
+.list_body input:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid orange;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ddd;
+    margin-top: 5%;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+    display: block;
+}
+
+section {
+    display: none;
+}
+
+.chart_area{
+    width: 100%;
+    height: 600px;
+    border:  solid 1px gray;
+    margin: 10px;
+}
+.list_body [type=radio]:checked ~ label {
+    background: white;
+    z-index: 0;
+}
+
+#section_table {
+    margin: 30px auto;
+    width: 100%;
+    height: 500px;
+    border-collapse: collapse;
+    border-top: 3px solid #ffa500;
+}
+
+#section_table2 {
+    margin: 30px auto;
+    width: 100%;
+    height: 500px;
+    border-collapse: collapse;
+    border-top: 3px solid #ffa500;
+}
+
+#section_table3 {
+    margin: 30px auto;
+    width: 100%;
+    height: 500px;
+    border-collapse: collapse;
+    border-top: 3px solid #ffa500;
+}
+
+#section_table4 {
+    margin: 30px auto;
+    width: 100%;
+    height: 500px;
+    border-collapse: collapse;
+    border-top: 3px solid #ffa500;
+}
+
+#section_table5 {
+    margin: 30px auto;
+    width: 100%;
+    height: 500px;
+    border-collapse: collapse;
+    border-top: 3px solid #ffa500;
+}
+
+/* 검색어필드 버튼 크기 */
+.search> input {
+    width: 220px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+.search> button {
+    width: 50px;
+    height: 30px;
+}
+.search {
+    float: right;
+    margin-right: 10%;
+}
+

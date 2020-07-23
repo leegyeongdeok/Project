@@ -1,0 +1,104 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+ul, li {
+    list-style: none;
+}
+
+/* 첫번쨰 div */
+#pageBack {
+    width: 100vw;
+    min-width: 1200px;
+}
+
+#myPage {
+    width: calc(100% - 300px);
+    max-width: 900px;
+    min-width: 700px;
+    margin: 0 auto 0 auto;
+    letter-spacing: -1px;
+    height: 900px;
+}
+
+#pageMain {
+    overflow: hidden;
+    width: 100%;
+}
+
+#content_box {
+    margin: 70px auto 0 auto;
+    width: 80%;
+    overflow: hidden;
+
+}
+
+.content_tit {
+    font-size: 35px;
+    font-weight: 350;
+    text-align: center;
+}
+
+.content_info {
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.desc_leave {
+    padding: 6% 3%;
+    margin: 0;
+    text-align: center;
+}
+
+.wrap_notice {
+    padding: 5% 2%;
+    margin: auto;
+    width: 94%;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.wrap_notice>h4{
+    margin: 0;
+}
+
+.list_leave > li {
+    padding-top: 3%;
+}
+
+.desc_em{
+    font-weight: 600;
+}
+
+.wrap_inp {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.wrap_inp>label{
+    margin: 0;
+}
+
+.btn_leave {
+    background-color: orange;
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin: 20px auto;
+    width: 20%;
+    height: 40px;
+    border: none;
+}
+
+
+

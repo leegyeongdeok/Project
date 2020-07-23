@@ -1,0 +1,100 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.post_detail_top {
+    width: 100vw;
+    min-width: 1400px;
+    padding-top: 50px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.post_tit {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.post_desc {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+
+.board_desc {
+    font-size: 18px;
+}
+
+.content {
+    margin: 0 auto;
+    width: 100vw;
+    min-width: 1400px;
+    min-height: 700px;
+}
+
+.post_brd_title {
+    width: 68%;
+    margin: 10px auto;
+    position: relative;
+    height: 80px;
+    font-size: 25px;
+    border-top: 2px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.post_detail_tbl_cell {
+    width: 100vw;
+    height: 80px;
+    display: table-cell;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.post_brd_editor {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#content_textArea {
+    width: 69vw;
+    height: 60vh;
+    min-height: 600px;
+}
+
+.btn_area {
+    margin: 20px auto;
+    width: 70%;
+    text-align: right;
+}
+
+.cancel, .registration {
+
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 0;
+    background-color: orange;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+
+}
+
+.cancel {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.post_writing_title {
+    font-size: 25px;
+    width: 90%;
+    height: 28px;
+    border: 0;
+    font-weight: bolder;
+}
